@@ -4,6 +4,8 @@
 
 This specification defines the information architecture, interactive site map, UI component wireframes, and frontend JSON data schema for building the honors research website.
 
+> **Implementation note:** the `audit-records.json` schema sketched in §3 below has since been implemented as [`data/sage-audit-schema.json`](../data/sage-audit-schema.json), with real records in [`data/sage-audit-data.json`](../data/sage-audit-data.json), a `data/codebook.json` for the full coding vocabulary, and a `data/references.json` for the bibliography. It also gained a fifth, IS/IT-facing coding tier (`infrastructure_critique`) not yet reflected in the wireframes below — see [`docs/theoretical-framework.md`](theoretical-framework.md) §4 and [`docs/audit-schema-guide.md`](audit-schema-guide.md) for why. The site itself (the actual pages this spec describes) has not been built yet.
+
 \---
 
 ## 1\. Interactive Site Map \& Navigation Hierarchy

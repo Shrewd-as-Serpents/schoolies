@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sage-audit-schema.json",
+  "title": "DecolonialAuditRecord",
+  "description": "v2. Extends the v1 schema in website-site-architecture.md by promoting the socio-technical dimension out of deconstructive_analysis into its own top-level, co-equal section (infrastructure_critique), and by structuring it so an information-systems reader can identify the exact class of technical mechanism being audited. See docs/audit-schema-guide.md for the design rationale and how to extend this.",
+  "type": "object",
+  "required": [
+    "record_id",
+    "source_text",
+    "deconstructive_analysis",
+    "infrastructure_critique",
+    "reconstructive_ecology",
+    "reflexive_log"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "description": "Unique id, format SAGE-<AUTHOR3>-<YEAR>-P<PAGE>. If a page has more than one audited unit, append -A, -B, ... .",
+      "pattern": "^SAGE-[A-Z]{3}-[0-9]{4}-P[0-9]+[A-Z]?$",
+      "examples": ["SAGE-ALT-2011-P153"]
+    },
+    "source_text": {
+      "type": "object",
+      "required": ["author", "work", "year", "page_number", "literal_excerpt"],
+      "properties": {
+        "author": { "type": "string" },
+        "work": { "type": "string" },
+        "year": { "type": "integer" },
+        "page_number": { "type": "integer" },
+        "literal_excerpt": {
+          "type": "string",
+          "description": "Verbatim quotation only. No paraphrase, no interpretation. This is the Wolcott (2009) transparency layer -- every downstream tag must be traceable back to this exact string."
+        }
+      }
+    },
+    "deconstructive_analysis": {
+      "type": "object",
+      "description": "Discipline 1: decolonial sociology (Santos, Grosfoguel, Trouillot). What the passage renders non-existent, and which historical epistemicide it re-enacts.",
+      "required": ["monoculture_tags", "erased_entity", "rhetorical_device", "historical_epistemicide_lens"],
+      "properties": {
+        "monoculture_tags": {
+          "type": "array",
+          "description": "One or more of Santos's five monocultures. Use the short codes from decolonial-methods-audit-protocol.md Section 2.1.",
+          "items": {
+            "enum": ["MONO_KNOWLEDGE", "MONO_TIME", "MONO_CLASS", "MONO_SCALE", "MONO_PRODUCTIVITY"]
+          },
+          "minItems": 1
+        },
+        "erased_entity": {
+          "type": "string",
+          "description": "Who or what knowledge-form is rendered ignorant/residual/inferior/local/unproductive by this passage."
+        },
+        "rhetorical_device": {
+          "type": "string",
+          "description": "The Fairclough-style CDA layer -- the lexical/rhetorical move that manufactures authority (e.g. efficiency metaphors, passive voice, 'rigor' as gatekeeping term)."
+        },
+        "historical_epistemicide_lens": {
+          "type": "object",
+          "required": ["framework", "erasure_type"],
+          "properties": {
+            "framework": { "type": "string", "description": "Citing REF ids from master-reference-key.md, e.g. '[REF-GRO-2013]; [REF-TRO-1995]'." },
+            "erasure_type": { "type": "string" },
+            "historical_lens_tag": {
+              "enum": ["HIST_AL_ANDALUS", "HIST_INDIGENOUS_GENOCIDE", "HIST_AFRICAN_ENSLAVEMENT", "HIST_GENDER_WITCH_HUNTS"]
+            },
+            "silence_moment": {
+              "enum": ["FACT_CREATION", "FACT_ASSEMBLY", "FACT_RETRIEVAL", "RETROSPECTIVE_SIGNIFICANCE"],
+              "description": "Trouillot's (1995) four moments of archival silencing."
+            }
+          }
+        }
+      }
+    },
+    "infrastructure_critique": {
+      "type": "object",
+      "description": "Discipline 2: information science / critical data studies (Olson, Patin et al., Trouillot-as-archival-theorist, Duarte & Belarde-Lewis, Berman, Sutherland). NEW in v2 -- see docs/audit-schema-guide.md '#1' for why this is its own top-level section rather than a nested field.",
+      "required": ["mechanism_type", "named_system_or_practice", "technical_function", "gatekeeping_effect", "is_it_literature"],
+      "properties": {
+        "mechanism_type": {
+          "description": "The CLASS of infrastructure being audited, not the specific product. This is the taxonomy an IT/data-architecture reader will actually recognize from their own work. Closed vocabulary, extend deliberately (see guide).",
+          "enum": [
+            "full_text_indexing",
+            "commercial_database_paywall",
+            "fixed_schema_data_collection",
+            "qualitative_data_platform",
+            "controlled_vocabulary_classification"
+          ]
+        },
+        "named_system_or_practice": {
+          "type": "string",
+          "description": "The specific tool or practice named or implied in the excerpt, e.g. 'ZyIndex', 'LEXIS/NEXIS', 'precoded protocol variables'."
+        },
+        "technical_function": {
+          "type": "string",
+          "description": "Plain, accurate description of what the mechanism actually does computationally/organizationally -- written so a systems person would recognize it as correct, not just rhetorically damning."
+        },
+        "gatekeeping_effect": {
+          "type": "string",
+          "description": "The direct consequence for what becomes findable/codable/legible, stated as an effect of the mechanism_type, not restated sociology."
+        },
+        "is_it_literature": {
+          "type": "array",
+          "description": "REF ids from master-reference-key.md Section 3 (Archival Power, Metadata, & Epistemicide in Information Studies). This array is what makes the 'second named discipline' claim falsifiable rather than asserted -- every infrastructure_critique should cite at least one.",
+          "items": { "type": "string", "pattern": "^\\[REF-[A-Z]{3}-[0-9]{4}\\]$" },
+          "minItems": 1
+        }
+      }
+    },
+    "reconstructive_ecology": {
+      "type": "object",
+      "description": "The synthesis move: Santos's Ecologies answering the Monocultures tagged above, validated against qualitative-methods reliability standards.",
+      "required": ["ecology_tag", "restored_presence", "qualitative_method_value", "validation_criterion"],
+      "properties": {
+        "ecology_tag": {
+          "enum": ["ECO_KNOWLEDGES", "ECO_TEMPORALITIES", "ECO_RECOGNITION", "ECO_TRANSSCALE", "ECO_PRODUCTIVITIES"]
+        },
+        "restored_presence": { "type": "string" },
+        "qualitative_method_value": { "type": "string" },
+        "validation_criterion": { "type": "string" }
+      }
+    },
+    "reflexive_log": {
+      "type": "object",
+      "required": ["coder_positionality", "timestamp"],
+      "properties": {
+        "coder_positionality": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date" }
+      }
+    }
+  }
+}
