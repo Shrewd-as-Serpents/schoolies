@@ -1,0 +1,126 @@
+{
+  "$description": "The full coding vocabulary referenced by data/sage-audit-schema.json enums. This is the canonical definition source -- audit records only ever store the short codes (e.g. MONO_KNOWLEDGE); this file is where a reader or a site's UI looks up what a code actually means. Previously this vocabulary existed only as prose bullet lists duplicated across decolonial-methods-audit-protocol.md, sage-methods-critique-v2 (1).md, and several draft .txt files -- consolidated here as the single source of truth.",
+  "tier_1_monocultures": {
+    "framework": "Boaventura de Sousa Santos (2014), sociology of absences -- [REF-SAN-2014]; [REF-SAN-2007]",
+    "codes": {
+      "MONO_KNOWLEDGE": {
+        "name": "Monoculture of Knowledge and Rigor",
+        "definition": "Tags instructions that treat Anglo-American empiricist science and formal academic canons as the only valid criteria for truth, dismissing vernacular, oral, or spiritual knowledges as ignorant or unscientific."
+      },
+      "MONO_TIME": {
+        "name": "Monoculture of Linear Time",
+        "definition": "Tags requirements that enforce linear, chronological progression, labeling non-linear, relational, or ancestral temporalities as backward, obsolete, or residual."
+      },
+      "MONO_CLASS": {
+        "name": "Monoculture of Naturalized Classification",
+        "definition": "Tags instances where racial, gendered, or institutional hierarchies are naturalized or treated as objective demographic categories rather than products of historical domination."
+      },
+      "MONO_SCALE": {
+        "name": "Monoculture of the Dominant Scale",
+        "definition": "Tags pressure to abstract local realities into universal 'theoretical codes' or globalized frameworks, treating the local as merely parochial."
+      },
+      "MONO_PRODUCTIVITY": {
+        "name": "Monoculture of Capitalist Productivity",
+        "definition": "Tags guidelines that measure value solely through output, efficiency, or commodified data, discarding non-extractive social relations as unproductive."
+      }
+    }
+  },
+  "tier_2_extraction": {
+    "framework": "polanco et al. (2020), Bennett (2014) -- [REF-POL-2020]; [REF-BEN-2014]",
+    "codes": {
+      "EXT_GENTRIFICATION": {
+        "name": "Knowledge Gentrification (\"Flip and Fix\")",
+        "definition": "Tags guidelines instructing researchers to sanitize, translate, or 'renovate' raw, vernacular stories into respectable academic prose for publication markets."
+      },
+      "EXT_VACUUM_PACK": {
+        "name": "Vacuum-Packing / NVivo-ization",
+        "definition": "Tags procedures that de-contextualize oral accounts by converting them into prepackaged, de-identified, software-indexed data points."
+      },
+      "EXT_STORYCIDE": {
+        "name": "Storycide (Historicidio) / Knowledge Captivity",
+        "definition": "Tags the systematic discarding or locking away of participant narratives that do not fit the researcher's coding protocol."
+      },
+      "EXT_ZERO_POINT": {
+        "name": "Zero-Point Hubris / \"iCloud Researcher\"",
+        "definition": "Tags passive, disembodied academic language ('the data indicates', 'findings reveal') that conceals researcher positionality, institutional privilege, and geopolitical location."
+      },
+      "EXT_EAD": {
+        "name": "English Academic Discourse / Technical Mandate",
+        "definition": "Tags mandatory enforcement of standardized English publishing norms, proprietary indexing software, or institutional research templates."
+      }
+    }
+  },
+  "tier_3_historical_lenses": {
+    "framework": "Grosfoguel (2013) four genocides/epistemicides; Trouillot (1995) four moments of silence -- [REF-GRO-2013]; [REF-TRO-1995]",
+    "historical_lens_codes": {
+      "HIST_AL_ANDALUS": "The historic erasure of Arab-Islamic and Jewish intellectual traditions during the Reconquista.",
+      "HIST_INDIGENOUS_GENOCIDE": "The civilizational erasure, dispossession, and euphemistic classification of Indigenous peoples in the Americas.",
+      "HIST_AFRICAN_ENSLAVEMENT": "The ontological reduction, commodification, and archival muteness imposed by the Transatlantic slave trade.",
+      "HIST_GENDER_WITCH_HUNTS": "The systematic destruction of autonomous, embodied female knowledge practices during European witch trials."
+    },
+    "silence_moment_codes": {
+      "FACT_CREATION": "Silence enters at the creation of sources -- what the textbook instructs researchers to treat as valid source material in the first place.",
+      "FACT_ASSEMBLY": "Silence enters at the creation of archives -- what gets indexed, digitized, or database-organized.",
+      "FACT_RETRIEVAL": "Silence enters at the creation of narratives -- how the textbook teaches coding and retrieval to shape what's 'found'.",
+      "RETROSPECTIVE_SIGNIFICANCE": "Silence enters at the creation of history -- what ultimately counts as qualitative canon."
+    }
+  },
+  "tier_4_ecologies": {
+    "framework": "Santos (2014) five ecologies; Wolcott (2009); Kirk & Miller (1986) -- [REF-SAN-2014]; [REF-WOL-2009]; [REF-KIR-1986]",
+    "codes": {
+      "ECO_KNOWLEDGES": {
+        "name": "Ecology of Knowledges",
+        "definition": "Restores plural, contextual ways of knowing alongside scientific paradigms, validated via Wolcott's Thick Description."
+      },
+      "ECO_TEMPORALITIES": {
+        "name": "Ecology of Temporalities",
+        "definition": "Restores cyclical, generational, or non-linear memory systems, validated via historical contextualization."
+      },
+      "ECO_RECOGNITION": {
+        "name": "Ecology of Recognition",
+        "definition": "Reclaims 'differences among equals' by de-naturalizing social hierarchies."
+      },
+      "ECO_TRANSSCALE": {
+        "name": "Ecology of Trans-Scale",
+        "definition": "Reclaims site-specific, non-globalized realities -- 'des-globalizing' the local."
+      },
+      "ECO_PRODUCTIVITIES": {
+        "name": "Ecology of Productivities",
+        "definition": "Reclaims non-capitalist, reciprocal, and communal forms of knowledge generation."
+      }
+    },
+    "validity_code": {
+      "QUAL_VALIDITY": "Cites explicit qualitative reliability criteria -- Kirk & Miller's synchronic/diachronic reliability, reflexivity logs, or communicative member-checking -- to defend the reconstructive reading."
+    }
+  },
+  "tier_5_infrastructure_mechanisms": {
+    "framework": "NEW in v2 -- information science / critical data studies, paired discipline. See docs/audit-schema-guide.md for the design rationale. Grounded in master-reference-key.md Section 3 -- [REF-OLS-2002]; [REF-PAT-2021]; [REF-TRO-1995]; [REF-DUA-2015]; [REF-SUT-2021]; [REF-BER-1971].",
+    "codes": {
+      "full_text_indexing": {
+        "name": "Full-Text Indexing",
+        "definition": "A search/indexing engine that flattens heterogeneous documents into one uniformly keyword-searchable corpus, discarding format, provenance, and language metadata in the process. Example in this audit: ZyIndex.",
+        "status": "used in current data (SAGE-ALT-2011-P153)"
+      },
+      "commercial_database_paywall": {
+        "name": "Commercial Database / Paywall",
+        "definition": "A subscription-gated corpus where access control and the vendor's own proprietary classification scheme jointly determine what counts as available data. Example in this audit: LEXIS/NEXIS.",
+        "status": "used in current data (SAGE-ALT-2011-P174)"
+      },
+      "fixed_schema_data_collection": {
+        "name": "Fixed-Schema Data Collection",
+        "definition": "A schema-on-write data model: fields/categories are defined before any data is collected, and every observation must be forced into a predefined slot or be dropped. Example in this audit: Altheide's precoded protocol variables.",
+        "status": "used in current data (SAGE-ALT-2011-P158)"
+      },
+      "qualitative_data_platform": {
+        "name": "Qualitative Data Analysis Platform",
+        "definition": "Coding/tagging software (e.g. NVivo) that imposes its own internal data model -- nodes, cases, attributes -- onto narrative material as a condition of analysis.",
+        "status": "placeholder -- referenced throughout the source documents (polanco et al.'s 'NVivo-ized' critique) but no textbook passage has yet been audited against it with a page citation. Candidate for the next record added to sage-audit-data.json."
+      },
+      "controlled_vocabulary_classification": {
+        "name": "Controlled Vocabulary / Classification Scheme",
+        "definition": "Library/metadata classification systems (e.g. Library of Congress Subject Headings) whose fixed term lists determine what a text can be found under, and whose historical bias is documented in library and information science (Olson 2002, Berman 1971).",
+        "status": "placeholder -- the citation base (Section 3 of master-reference-key.md) supports this category, but it awaits its own audited textbook passage."
+      }
+    }
+  }
+}

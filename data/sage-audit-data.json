@@ -1,0 +1,119 @@
+{
+  "$schemaRef": "sage-audit-schema.json",
+  "records": [
+    {
+      "record_id": "SAGE-ALT-2011-P153",
+      "source_text": {
+        "author": "David L. Altheide",
+        "work": "Qualitative Media Analysis",
+        "year": 2011,
+        "page_number": 153,
+        "literal_excerpt": "Recent software development in word processors and database managers has helped solve this problem of how to manage and study multiple files at once. The solution involves indexing or having your computer 'read and mark' your files so that a few simple commands can basically treat everything stored in files as 'one big file!'... The system I have found useful is called Zyindex... this capacity to search all relevant documents is a terrific way to scan and review materials that often become a source of creative insights, codes, and especially examples."
+      },
+      "deconstructive_analysis": {
+        "monoculture_tags": ["MONO_KNOWLEDGE", "MONO_PRODUCTIVITY"],
+        "erased_entity": "Non-digitized, oral, embodied, and non-English vernacular archives that cannot be flattened into 'one big file' of machine-readable text.",
+        "rhetorical_device": "Efficiency rhetoric ('read and mark', 'terrific way to scan') that privileges algorithmic speed and searchability over deep, contextual narrative engagement.",
+        "historical_epistemicide_lens": {
+          "framework": "[REF-GRO-2013]; [REF-TRO-1995]",
+          "erasure_type": "Colonization of memory via standardized archival indexing.",
+          "historical_lens_tag": "HIST_INDIGENOUS_GENOCIDE",
+          "silence_moment": "FACT_ASSEMBLY"
+        }
+      },
+      "infrastructure_critique": {
+        "mechanism_type": "full_text_indexing",
+        "named_system_or_practice": "ZyIndex",
+        "technical_function": "A full-text indexing engine that treats heterogeneous source files as one undifferentiated, keyword-searchable corpus, discarding provenance, format, and language metadata in favor of flat retrieval.",
+        "gatekeeping_effect": "Only content that has already been digitized into machine-readable, indexable text becomes 'findable' by the researcher; everything else -- oral testimony, non-English scripts, physical/ephemeral records -- is structurally invisible to the search, independent of its evidentiary value.",
+        "is_it_literature": ["[REF-TRO-1995]", "[REF-PAT-2021]", "[REF-OLS-2002]"]
+      },
+      "reconstructive_ecology": {
+        "ecology_tag": "ECO_KNOWLEDGES",
+        "restored_presence": "Oral storytelling and non-digitized community archives, restored as autonomous, primary knowledge sources rather than inputs awaiting digitization.",
+        "qualitative_method_value": "Thick description that preserves each account's unique, non-aggregable context instead of flattening it into one searchable file.",
+        "validation_criterion": "Kirk & Miller (1986) synchronic reliability, cross-checked against Altheide's own visual workflow diagram (Fig. 3.4)."
+      },
+      "reflexive_log": {
+        "coder_positionality": "Undergraduate researcher at a North American university with full proxy access to licensed indexing software and digitized English-language corpora; tagging this passage as MONO_KNOWLEDGE required recognizing the temptation, produced by that same institutional access, to treat full-text indexing as a neutral shortcut rather than a filter.",
+        "timestamp": "2026-08-30"
+      }
+    },
+    {
+      "record_id": "SAGE-ALT-2011-P158",
+      "source_text": {
+        "author": "David L. Altheide",
+        "work": "Qualitative Media Analysis",
+        "year": 2011,
+        "page_number": 158,
+        "literal_excerpt": "Step 4. List several items or categories (variables) to guide data collection and draft a protocol (data collection sheet)... Figure 3.2 illustrates the logic of protocol analysis... We would note which segment came first and then obtain the following data for each segment: the specific topic (several of which were precoded based on previous observations), themes (most were precoded), and sources used (mainly precoded...)"
+      },
+      "deconstructive_analysis": {
+        "monoculture_tags": ["MONO_SCALE", "MONO_TIME"],
+        "erased_entity": "Narrative content and sequencing that does not conform to categories fixed before any data was collected.",
+        "rhetorical_device": "Procedural, checklist phrasing ('Step 4', 'List several items') that presents category-fixing-in-advance as neutral method rather than an interpretive choice.",
+        "historical_epistemicide_lens": {
+          "framework": "[REF-GRO-2013]",
+          "erasure_type": "Scholastic pre-classification that neutralizes content falling outside an established grid.",
+          "historical_lens_tag": "HIST_AL_ANDALUS",
+          "silence_moment": "FACT_RETRIEVAL"
+        }
+      },
+      "infrastructure_critique": {
+        "mechanism_type": "fixed_schema_data_collection",
+        "named_system_or_practice": "Precoded protocol variables (Fig. 3.2, 'Logic of Protocol Analysis')",
+        "technical_function": "A schema-on-write data model: fields, themes, and sources are defined before ingestion, and each new observation is forced into one of the predefined slots -- structurally identical to designing a fixed relational table schema before the data it will hold is known.",
+        "gatekeeping_effect": "Any element of a participant's account that does not map onto a precoded field has no destination in the data structure and is dropped at the point of entry, not flagged for later reconsideration.",
+        "is_it_literature": ["[REF-OLS-2002]", "[REF-DUA-2015]"]
+      },
+      "reconstructive_ecology": {
+        "ecology_tag": "ECO_TRANSSCALE",
+        "restored_presence": "An emergent, open-ended coding process in which participant categories generate the analytical themes, rather than the reverse.",
+        "qualitative_method_value": "Accommodates circular, non-linear narrative arcs instead of forcing a single chronological sequence onto every account.",
+        "validation_criterion": "Communicative/member-checking validation against the participants whose accounts were coded."
+      },
+      "reflexive_log": {
+        "coder_positionality": "Formally trained in quantitative and standardized qualitative methods, my instinct is to build a matrix before reading data; critiquing Altheide's precoding required naming my own discomfort with emergent, unstructured narrative.",
+        "timestamp": "2026-08-30"
+      }
+    },
+    {
+      "record_id": "SAGE-ALT-2011-P174",
+      "source_text": {
+        "author": "David L. Altheide",
+        "work": "Qualitative Media Analysis",
+        "year": 2011,
+        "page_number": 174,
+        "literal_excerpt": "Unlike CD-ROM systems... LEXIS/NEXIS is on-line from a main computer and must be subscribed to by users who are issued a password... Initially costing several hundred dollars per hour, LEXIS/NEXIS is now made available at no charge to the user by a number of universities and public libraries... It is the way LEXIS/NEXIS is organized and the search options that make it a revolutionary research and teaching resource."
+      },
+      "deconstructive_analysis": {
+        "monoculture_tags": ["MONO_PRODUCTIVITY", "MONO_CLASS"],
+        "erased_entity": "Non-commercial, Global South, or community-held archives that fall outside a subscription-gated commercial database.",
+        "rhetorical_device": "Passive, zero-point framing ('is now made available') that presents subscription access as a neutral fact of the research landscape rather than a market and institutional relationship.",
+        "historical_epistemicide_lens": {
+          "framework": "[REF-GRO-2013]",
+          "erasure_type": "Commercial gatekeeping analogous to colonial archives restricted to propertied elites.",
+          "historical_lens_tag": "HIST_AFRICAN_ENSLAVEMENT",
+          "silence_moment": "FACT_CREATION"
+        }
+      },
+      "infrastructure_critique": {
+        "mechanism_type": "commercial_database_paywall",
+        "named_system_or_practice": "LEXIS/NEXIS",
+        "technical_function": "A subscription-gated commercial database that also imposes its own proprietary indexing and subject organization on the material it carries, so access control and classification control are exercised by the same vendor.",
+        "gatekeeping_effect": "What counts as available 'data' is set first by whether a source was ever licensed into the database at all, and second by how the vendor's own indexing scheme classifies it -- two gates a researcher rarely sees, both upstream of any interpretive choice they make.",
+        "is_it_literature": ["[REF-PAT-2021]", "[REF-BER-1971]"]
+      },
+      "reconstructive_ecology": {
+        "ecology_tag": "ECO_PRODUCTIVITIES",
+        "restored_presence": "Open-access, community-held, and non-commercial repositories restored as legitimate primary sources alongside licensed databases.",
+        "qualitative_method_value": "Auditability and transparency about which institutional privileges made a given search possible in the first place.",
+        "validation_criterion": "Explicit disclosure of database access and licensing as part of the method section, not just the findings."
+      },
+      "reflexive_log": {
+        "coder_positionality": "IP-authenticated university access masks the subscription cost of LEXIS/NEXIS entirely; using that access without disclosure would embed this audit in the very market gatekeeping it critiques.",
+        "timestamp": "2026-08-30"
+      }
+    }
+  ]
+}

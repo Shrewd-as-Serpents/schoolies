@@ -1,0 +1,179 @@
+{
+  "$description": "Structured version of docs/master-reference-key.md. Each entry's ref_id is the id used throughout data/sage-audit-data.json (deconstructive_analysis.historical_epistemicide_lens.framework, infrastructure_critique.is_it_literature). The prose version in docs/ remains the human-reading copy; this file is the machine-readable one for site search/filter/citation-linking.",
+  "sections": [
+    "Decolonial Epistemology & Sociology of Absences",
+    "Qualitative Methodology, Extraction, & Meta-Critique",
+    "Archival Power, Metadata, & Epistemicide in Information Studies",
+    "Literary Testimonio, Genre Trouble, & Discursive Injustice"
+  ],
+  "references": [
+    {
+      "ref_id": "REF-SAN-2014",
+      "section": "Decolonial Epistemology & Sociology of Absences",
+      "citation": "de Sousa Santos, B. (2014). Epistemologies of the South: Justice against epistemicide. Routledge.",
+      "key_concepts": ["Sociology of Absences", "Sociology of Emergencies", "Abyssal Line", "5 Monocultures", "5 Ecologies", "Intercultural Translation"],
+      "project_function": "Core theoretical foundation for Tier 1 deconstructive absence coding and Tier 4 reconstructive ecology mapping."
+    },
+    {
+      "ref_id": "REF-SAN-2007",
+      "section": "Decolonial Epistemology & Sociology of Absences",
+      "citation": "de Sousa Santos, B. (2007). Beyond abyssal thinking: From global lines to ecologies of knowledges. Review (Fernand Braudel Center), 30(1), 45-89.",
+      "key_concepts": ["Abyssal Thinking", "Epistemicide", "Ecology of Knowledges", "Subaltern Cosmopolitanism"],
+      "project_function": "Defines the 'abyssal line' that divides visible/sanctioned knowledge from invisible/disqualified knowledge."
+    },
+    {
+      "ref_id": "REF-GRO-2013",
+      "section": "Decolonial Epistemology & Sociology of Absences",
+      "citation": "Grosfoguel, R. (2013). The structure of knowledge in Westernized universities: Epistemic racism/sexism and the four genocides/epistemicides of the long 16th century. Human Architecture: Journal of the Sociology of Self-Knowledge, 11(1), 73-90.",
+      "key_concepts": ["Four Genocides/Epistemicides of the Long 16th Century", "Epistemic Racism/Sexism", "Westernized University Canon"],
+      "project_function": "Historical bias-lens cross-referencing (Tier 3 coding) that grounds Santos's abstract monocultures in documented historical violence."
+    },
+    {
+      "ref_id": "REF-GRO-2007",
+      "section": "Decolonial Epistemology & Sociology of Absences",
+      "citation": "Grosfoguel, R. (2007). The epistemic decolonial turn: Beyond political-economy paradigms. Cultural Studies, 21(2-3), 211-223.",
+      "key_concepts": ["Coloniality of Power", "Geopolitics of Knowledge", "Body-Politics of Knowledge"],
+      "project_function": "Establishes that location of enunciation (where one speaks from) shapes the validity claims of research."
+    },
+    {
+      "ref_id": "REF-CAS-2010",
+      "section": "Decolonial Epistemology & Sociology of Absences",
+      "citation": "Castro-Gomez, S. (2010). La hybris del punto zero: Ciencia, raza e ilustracion en la Nueva Granada (1750-1816). Editorial Pontificia Universidad Javeriana.",
+      "key_concepts": ["La hybris del punto zero (Hubris of the Zero Point)", "Unobserved Observer", "Enlightenment Science & Coloniality"],
+      "project_function": "Theoretical critique of objectivity; used to unmask the unlocated, disembodied voice of research textbooks."
+    },
+    {
+      "ref_id": "REF-QUI-2000",
+      "section": "Decolonial Epistemology & Sociology of Absences",
+      "citation": "Quijano, A. (2000). Coloniality of power, Eurocentrism, and Latin America. Nepantla: Views from South, 1(3), 533-580.",
+      "key_concepts": ["Coloniality of Power", "Eurocentrism", "Social Classification", "Racial Capitalism"],
+      "project_function": "Informs the Monoculture of Naturalized Classification (MONO_CLASS)."
+    },
+    {
+      "ref_id": "REF-MAL-2017",
+      "section": "Decolonial Epistemology & Sociology of Absences",
+      "citation": "Maldonado-Torres, N. (2017). Frantz Fanon and the decolonial turn in psychology: From modern/colonial methods to the decolonial attitude. South African Journal of Psychology, 47(4), 432-441.",
+      "key_concepts": ["Coloniality of Being", "Decolonial Attitude", "Methodological Captivity"],
+      "project_function": "Analyzes how rigid insistence on standard methods functions as a technology of ontological control."
+    },
+    {
+      "ref_id": "REF-SMI-2012",
+      "section": "Decolonial Epistemology & Sociology of Absences",
+      "citation": "Smith, L. T. (2012). Decolonizing methodologies: Research and Indigenous peoples (2nd ed.). Zed Books.",
+      "key_concepts": ["Imperial Research", "Extraction", "Indigenous Knowledge Systems", "Counter-Research Protocols"],
+      "project_function": "Foundational text for critiquing Western academic research as an instrument of empire."
+    },
+    {
+      "ref_id": "REF-TUC-2012",
+      "section": "Decolonial Epistemology & Sociology of Absences",
+      "citation": "Tuck, E., & Yang, K. W. (2012). Decolonization is not a metaphor. Decolonization: Indigeneity, Education & Society, 1(1), 1-40.",
+      "key_concepts": ["Settler Colonialism", "Settler Moves to Innocence", "Material Land Restitution vs. Metaphorical Decolonization"],
+      "project_function": "Prevents decolonial terminology from being reduced to a superficial academic buzzword."
+    },
+    {
+      "ref_id": "REF-POL-2020",
+      "section": "Qualitative Methodology, Extraction, & Meta-Critique",
+      "citation": "polanco, m., Hanson, N. D., Hernandez, C., Le Feber, T., Medina, S., Old Bucher, S., Rivera, E. I., Rodriguez, I., Vela, E., Velasco, B., & Le Feber, J. (2020). How to be unfaithful to Eurocentrism: A Spanglish decolonial critique to knowledge gentrification, captivity and storycide in qualitative research. The Qualitative Report, 25(1), 145-165.",
+      "key_concepts": ["Knowledge Gentrification (\"Flip and Fix\")", "Storycide (Historicidio)", "Knowledge Captivity", "Vacuum-Packing", "The \"iCloud Researcher\"", "Methodological Infidelity", "Ch'ixi (Rivera Cusicanqui)"],
+      "project_function": "Primary theoretical weapon for Tier 2 deconstructive extraction coding (EXT_GENTRIFICATION, EXT_VACUUM_PACK, EXT_STORYCIDE, EXT_ZERO_POINT)."
+    },
+    {
+      "ref_id": "REF-ALT-2011",
+      "section": "Qualitative Methodology, Extraction, & Meta-Critique",
+      "citation": "Altheide, D. L. (2011). Qualitative Media Analysis. SAGE Publications.",
+      "key_concepts": ["Ethnographic Content Analysis (ECA)", "Pre-coded Protocols", "Indexing Software (ZyIndex)", "Media Logic", "Formatting"],
+      "project_function": "Primary empirical object of analysis (the audited textbook)."
+    },
+    {
+      "ref_id": "REF-WOL-2009",
+      "section": "Qualitative Methodology, Extraction, & Meta-Critique",
+      "citation": "Wolcott, H. F. (2009). Writing up qualitative research (3rd ed.). SAGE Publications.",
+      "key_concepts": ["Thick Description", "Descriptive-to-Interpretive Arc", "Transparency", "Audit Trail"],
+      "project_function": "Qualitative methods benchmark used in Tier 4 to validate reconstructive readings (QUAL_VALIDITY)."
+    },
+    {
+      "ref_id": "REF-KIR-1986",
+      "section": "Qualitative Methodology, Extraction, & Meta-Critique",
+      "citation": "Kirk, J., & Miller, M. L. (1986). Reliability and validity in qualitative research. SAGE Publications.",
+      "key_concepts": ["Quixotic Reliability", "Diachronic Reliability", "Synchronic Reliability", "Qualitative Validity"],
+      "project_function": "Methodological standard for reflexive audit logs and reliability testing."
+    },
+    {
+      "ref_id": "REF-BEN-2014",
+      "section": "Qualitative Methodology, Extraction, & Meta-Critique",
+      "citation": "Bennett, K. (2014). Towards an epistemological monoculture: Mechanisms of epistemicide in European research publication. In K. Bennett (Ed.), The semiperiphery of academic writing: Discourses, communities, practices (pp. 35-49). Palgrave Macmillan.",
+      "key_concepts": ["English Academic Discourse (EAD)", "Epistemological Monoculture", "Peer-Review Gatekeeping", "Linguistic Coloniality"],
+      "project_function": "Informs socio-technical and language control coding (EXT_EAD)."
+    },
+    {
+      "ref_id": "REF-CZA-2011",
+      "section": "Qualitative Methodology, Extraction, & Meta-Critique",
+      "citation": "Czarniawska, B. (2011). A narrative approach to organization studies. SAGE Publications.",
+      "key_concepts": ["Referencing as Storytelling", "Referencing that Kills the Story", "Exegetic vs. Inspirational Modes"],
+      "project_function": "Critical perspective on referencing conventions and narrative structure in academic research."
+    },
+    {
+      "ref_id": "REF-TRO-1995",
+      "section": "Archival Power, Metadata, & Epistemicide in Information Studies",
+      "citation": "Trouillot, M.-R. (1995). Silencing the past: Power and the production of history. Beacon Press.",
+      "key_concepts": ["Four Moments of Silencing", "Archival Power", "Production of History"],
+      "project_function": "Locates where epistemic silences enter the research pipeline (SILENCE_MOMENT); also the source of the infrastructure_critique for full-text indexing (SAGE-ALT-2011-P153)."
+    },
+    {
+      "ref_id": "REF-PAT-2021",
+      "section": "Archival Power, Metadata, & Epistemicide in Information Studies",
+      "citation": "Patin, B., Sebastian, M., Yeon, J., Bertolini, D., & Grimm, A. (2021). Interrupting epistemicide: A practical framework for naming, identifying, and ending epistemic injustice in the information professions. Journal of the Association for Information Science and Technology, 72(10), 1306-1318.",
+      "key_concepts": ["Epistemicide in LIS", "Epistemic Violence", "Epistemic Injustice", "Information Exclusion", "Interrupting Framework"],
+      "project_function": "Models empirical frameworks for identifying epistemicide in information organizations and classification systems -- the anchor citation for infrastructure_critique across all three current audit records."
+    },
+    {
+      "ref_id": "REF-OLS-2002",
+      "section": "Archival Power, Metadata, & Epistemicide in Information Studies",
+      "citation": "Olson, H. A. (2002). The power to name: Locating the limits of subject representation in libraries. Kluwer Academic Publishers.",
+      "key_concepts": ["The Power to Name", "Subject Representation", "Limits of Controlled Vocabularies", "Marginalization in Classification"],
+      "project_function": "Grounding for cataloging and metadata critiques of Eurocentric classification; anchors the fixed_schema_data_collection and controlled_vocabulary_classification mechanism types."
+    },
+    {
+      "ref_id": "REF-DUA-2015",
+      "section": "Archival Power, Metadata, & Epistemicide in Information Studies",
+      "citation": "Duarte, M. E., & Belarde-Lewis, M. (2015). Imagining: Creating spaces for Indigenous ontologies. Cataloging & Classification Quarterly, 53(5-6), 677-702.",
+      "key_concepts": ["Indigenous Ontologies", "Knowledge Organization Systems", "Settler Surveillance in Library Systems"],
+      "project_function": "Example of reconstructive ecology in library and information science."
+    },
+    {
+      "ref_id": "REF-SUT-2021",
+      "section": "Archival Power, Metadata, & Epistemicide in Information Studies",
+      "citation": "Sutherland, T. (2021). A weapon and a tool: Decolonizing descriptions in archives. The International Journal of Information, Diversity, & Inclusion, 5(1), 72-78.",
+      "key_concepts": ["Archival Encounters", "Critical Archival Description", "Refusal in Archival Practice", "Liberatory Memory Work"],
+      "project_function": "Connects digital archival description with decolonial resistance."
+    },
+    {
+      "ref_id": "REF-BER-1971",
+      "section": "Archival Power, Metadata, & Epistemicide in Information Studies",
+      "citation": "Berman, S. (1971). Prejudices and antipathies: A tract on the LC subject heads concerning people. Scarecrow Press.",
+      "key_concepts": ["Bias in Library of Congress Subject Headings (LCSH)", "Controlled Vocabulary Hegemony", "Radical Cataloging"],
+      "project_function": "Historical precedent for auditing standard academic indexing tools; cited alongside commercial_database_paywall mechanism critique (SAGE-ALT-2011-P174)."
+    },
+    {
+      "ref_id": "REF-SPI-1988",
+      "section": "Literary Testimonio, Genre Trouble, & Discursive Injustice",
+      "citation": "Spivak, G. C. (1988). Can the subaltern speak? In C. Nelson & L. Grossberg (Eds.), Marxism and the interpretation of culture (pp. 271-313). University of Illinois Press.",
+      "key_concepts": ["Subaltern Muteness", "Epistemic Violence of Representation", "Colonial Subject Constitution"],
+      "project_function": "Highlights the trap of speaking for marginalized people within Eurocentric structures."
+    },
+    {
+      "ref_id": "REF-LYO-2002",
+      "section": "Literary Testimonio, Genre Trouble, & Discursive Injustice",
+      "citation": "Lyotard, J.-F. (2002). The differend: Phrases in dispute. University of Minnesota Press.",
+      "key_concepts": ["The Differend", "Discursive Injustice", "Incommensurability of Phrase Regimes"],
+      "project_function": "Explains how victim testimonies are invalidated when forced to conform to the perpetrator's rules of discourse."
+    },
+    {
+      "ref_id": "REF-DAN-1998",
+      "section": "Literary Testimonio, Genre Trouble, & Discursive Injustice",
+      "citation": "Danticat, E. (1998). The farming of bones. Penguin Books.",
+      "key_concepts": ["Testimonial Fiction", "1937 Parsley Massacre", "Retelling Survivor Stories"],
+      "project_function": "Literary demonstration of the double-bind faced by traumatized storytellers."
+    }
+  ]
+}
