@@ -1,0 +1,73 @@
+Here is a demonstration of how your **4-tier decolonial coding scheme** is applied to three representative passages from David L. Altheide’s *Qualitative Media Analysis* (SAGE, 2011). 
+
+This step-by-step application shows how the literal textbook instructions are deconstructed for their structural erasures and then reconstructed into qualitative ecologies.
+
+---
+
+### Audit Entry #1: The Software/Indexing Mandate
+
+#### **Tier 1: Literal Pass (Exact Excerpt)**
+> *"Recent software development in word processors and database managers has helped solve this problem of how to manage and study multiple files at once. The solution involves indexing or having your computer 'read and mark' your files so that a few simple commands can basically treat everything stored in files as 'one big file'!... The system I have found useful is called Zyindex... this capacity to search all relevant documents is a terrific way to scan and review materials that often become a source of creative insights, codes, and especially examples."*
+
+#### **Tier 2: Deconstructive Monoculture & Extraction Layer**
+* **Monoculture Tag**: `MONO_KNOWLEDGE` (**Monoculture of Knowledge and Rigor**).
+* **Extraction Tag**: `EXT_VACUUM_PACK` (**Vacuum-Packing / Data-ization**).
+* **Deconstructive Analysis**: The text assumes that all valid qualitative materials can—and should—be converted into digitized, machine-readable text files (`.txt`, `.doc`) that can be merged into "one big file". This logic renders non-digitized, oral, embodied, and non-English vernacular archives non-existent (*absent*). By treating document management as an algorithmic indexing operation ("read and mark"), the guide gentrifies local stories into searchable tokens, severing them from their spatial and cultural contexts.
+
+#### **Tier 3: Historical Bias-Lens Cross-Reference**
+* **Historical Epistemicide**: `HIST_INDIGENOUS_GENOCIDE` & `SILENCE_MOMENT` (**Trouillot Fact Assembly / Archival Silence**).
+* **Historical Alignment**: Re-enacts the colonial logic of standardized record-keeping and cataloging (akin to slave inventories and colonial land registries), where living human realities are reduced to inventory entries controlled by proprietary administrative systems.
+
+#### **Tier 4: Reconstructive Ecology Pass**
+* **Ecology Tag**: `ECO_KNOWLEDGES` (**Ecology of Knowledges**).
+* **Qualitative Value**: **Thick Description** (Harry Wolcott) & **Synchronic Reliability** (Kirk & Miller).
+* **Restored Reading**: Restores oral storytelling and un-indexed community archives as primary, autonomous knowledge sources. Rather than flattening distinct narratives into "one big file," the researcher must preserve the unique, non-aggregable context of each account through detailed qualitative contextualization.
+
+---
+
+### Audit Entry #2: The Pre-Coded Protocol (Predefined Variables)
+
+#### **Tier 1: Literal Pass (Exact Excerpt)**
+> *"Step 4. List several items or categories (variables) to guide data collection and draft a protocol (data collection sheet)... Figure 3.2 illustrates the logic of protocol analysis... We would note which segment came first and then obtain the following data for each segment: the specific topic (several of which were precoded based on previous observations), themes (most were precoded), and sources used (mainly precoded...)"*
+
+#### **Tier 2: Deconstructive Monoculture & Extraction Layer**
+* **Monoculture Tag**: `MONO_SCALE` (**Monoculture of the Dominant Scale**) & `MONO_TIME` (**Monoculture of Linear Time**).
+* **Extraction Tag**: `EXT_GENTRIFICATION` (**Knowledge Gentrification / "Flip and Fix"**) & `EXT_STORYCIDE`.
+* **Deconstructive Analysis**: Forcing incoming data into "precoded" categories prior to full engagement establishes a rigid grid of legibility. Stories or nuances that fail to fit these pre-established themes are systematically filtered out, committing **storycide**. The requirement to record "which segment came first" imposes a strict linear, chronological temporality, ignoring non-linear or ancestral temporalities.
+
+#### **Tier 3: Historical Bias-Lens Cross-Reference**
+* **Historical Epistemicide**: `HIST_AL_ANDALUS` & `SILENCE_MOMENT` (**Trouillot Fact Retrieval Silence**).
+* **Historical Alignment**: Mirrors the historical imposition of scholastic categories during the Reconquista, where non-conforming Jewish and Muslim intellectual texts were classified through Eurocentric Christian frameworks, stripping them of their original meanings.
+
+#### **Tier 4: Reconstructive Ecology Pass**
+* **Ecology Tag**: `ECO_TEMPORALITIES` (**Ecology of Temporalities**) & `ECO_TRANSSCALE`.
+* **Qualitative Value**: **Communicative / Member Validation**.
+* **Restored Reading**: Replaces rigid precoding with an emergent, open-ended interpretive process where participant categories take precedence over the researcher's pre-existing protocol. The temporal structure is expanded to accommodate circular, relational, and non-linear narrative arcs.
+
+---
+
+### Audit Entry #3: Commercial Database Access & Institutional Gatekeeping
+
+#### **Tier 1: Literal Pass (Exact Excerpt)**
+> *"Unlike CD-ROM systems... LEXIS/NEXIS is on-line from a main computer and must be subscribed to by users who are issued a password... Initially costing several hundred dollars per hour, LEXIS/NEXIS is now made available at no charge to the user by a number of universities and public libraries... It is the way LEXIS/NEXIS is organized and the search options that make it a revolutionary research and teaching resource."*
+
+#### **Tier 2: Deconstructive Monoculture & Extraction Layer**
+* **Monoculture Tag**: `MONO_PRODUCTIVITY` (**Monoculture of Capitalist Productivity**).
+* **Extraction Tag**: `EXT_EAD` (**English Academic Discourse / Institutional Gatekeeping**) & `EXT_ZERO_POINT` (**Zero-Point Hubris**).
+* **Deconstructive Analysis**: The text treats subscription-based, corporate databases (e.g., LEXIS/NEXIS) as the gold standard for text retrieval. This naturalizes a socio-technical dependency on Western university access and capital, while adopting a "zero-point" stance that presents commercial news wire services as neutral, objective representations of global reality. Non-commercial, independent, or Global South publications absent from LEXIS/NEXIS are structurally excluded from legitimate research.
+
+#### **Tier 3: Historical Bias-Lens Cross-Reference**
+* **Historical Epistemicide**: `HIST_AFRICAN_ENSLAVEMENT` & `SILENCE_MOMENT` (**Trouillot Fact Creation / Archival Production**).
+* **Historical Alignment**: Reproduces the commercial gatekeeping of colonial archives, where access to historical records was restricted to propertied elites, ensuring that the perspectives of enslaved and colonized peoples were excluded from official state histories.
+
+#### **Tier 4: Reconstructive Ecology Pass**
+* **Ecology Tag**: `ECO_PRODUCTIVITIES` (**Ecology of Productivities**).
+* **Qualitative Value**: **Auditability & Transparency** (Harry Wolcott).
+* **Restored Reading**: Expands the archival scope beyond commercial corporate databases to include open-access, community-held, and non-commercial repositories. Makes the institutional privilege and financial gatekeeping of data retrieval explicitly visible in the research methodology.
+
+---
+
+### Summary of Dataset Mapping
+These three audited entries directly mirror the structure implemented in your `sage-audit-data.json` database file. They provide your literature review and research website with an empirical, reproducible pipeline that bridges **theory (Santos & Grosfoguel)**, **textbook critique (Altheide & SAGE)**, and **reconstructive qualitative design (Wolcott, Kirk & Miller)**.
+
+📱 Would you like to draft the **reflexive audit memo** (the researcher positionality log) for these specific coding entries to satisfy Kirk & Miller's qualitative reliability standards?

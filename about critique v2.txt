@@ -1,0 +1,17 @@
+about critique v2
+
+This version formally integrates the **first methodology** (the qualitative multimodal document analysis of David Altheide's *Qualitative Media Analysis*) directly into your literature review and operationalizes the decolonial coding steps in exhaustive detail.
+
+### Key Enhancements in v2:
+*   **Methodological Framework (The First Method)**: Anchors your textbook audit as a formal **Qualitative Multimodal Document Analysis**. It argues that because textbooks are empirical "social products", we can use Altheide's own method of **Ethnographic Content Analysis (ECA)**—the constant comparative and circular analysis of document settings, formats, and nuances—to audit his guide's active erasures.
+*   **The 6-Step Operational Coding Protocol**: Maps out the exact sequence you will use to deconstruct the SAGE guide's text, visual flowcharts, and sample coding protocols:
+    1.  **Analytical Segmentation**: Breaking written lines, visual diagrams (like Altheide's Figure 3.2 on the logic of protocol analysis and Figure 3.3 on discourse formats), and sample coding sheets into units of analysis.
+    2.  **The Literal Pass**: verifiably transcribing exact content with zero interpretation, establishing a baseline of data that satisfies Harry Wolcott's standard of transparency.
+    3.  **Monoculture Coding**: Systematically tagging each unit against Boaventura de Sousa Santos's **five epistemological monocultures** (Knowledge/Rigor, Linear Time, Social Classification, Scale, Productivity) to identify who/what is rendered "non-existent" (as the ignorant, residual, inferior, local, or unproductive).
+    4.  **Rhetorico-Discursive & Socio-Technical Layer**: Analysing lexical choices that manufacture authority (e.g., using "rigor" or "credibility" as linguistic gatekeepers) alongside hidden software/access requirements (like NVivo, LEXIS/NEXIS, and ZyIndex).
+    5.  **Historical Bias-Lens Cross-Referencing**: Mapping monoculture tags to Michel-Rolph Trouillot’s four moments of archival silence and Ramón Grosfoguel’s four foundational epistemicides (Indigenous genocide, Atlantic slavery, Al-Andalus, and witch-hunts).
+    6.  **Reflexive Audit**: Logging your own academic training, interpretive decisions, and positionality to satisfy Kirk and Miller's criteria for qualitative reliability.
+*   **The Decolonial Coding Matrix**: Embeds an operational, spreadsheet-style template directly on the page, using a specific passage from Altheide (p. 153) regarding database indexing software to demonstrate how the literal pass, monoculture tags, historical lenses, and reflexive logs are executed side-by-side.
+*   **Looking Ahead to Reconstruction (The Second Method)**: Formally bridges this deconstructive audit with your upcoming second methodology (Decolonial Reconstruction) by showing how audited absences are eventually mapped to Santos's corresponding **ecologies** (ecologies of knowledges, temporalities, and recognitions) to model cognitive justice options.
+
+***

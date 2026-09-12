@@ -1,0 +1,37 @@
+In the decolonial critique articulated by **marcela polanco et al. (2020)**, **storycide** and **knowledge gentrification** are conceptualized as the primary destructive outputs of **methodological extraction** within academic qualitative research. 
+
+While qualitative research historically presents itself as a counter-hegemonic alternative to quantitative positivism, polanco et al. argue that it remains deeply tethered to Eurocentric paradigms through an uncritical "monogamous fidelity" to standardized research methods. Drawing on Puerto Rican philosopher Nelson Maldonado-Torres, they argue that the unquestioned mandate to adopt "the Method" operates as a technology of **epistemic and ontological colonization**. Methodological procedures construct a rigid hierarchy that establishes who is granted the status of a fully human "subject" (the researcher) and who is reduced to an "object of investigation" (the participant storyteller).
+
+---
+
+### 1. Knowledge Gentrification: The "Flip and Fix" of Vernacular Stories
+Polanco et al. define **knowledge gentrification** as an extractive academic renovation process analogous to urban gentrification. Within the colonial market economy of academic publishing, researchers—positioned as epistemologically superior—locate vernacular stories (*relatos de la calle de la vida*) told by everyday marginalized people (referred to as the "Liborios" of the world).
+
+Because these original accounts are often verbose, emotional, personal, or communicated in Spanglish, urban slang, or non-academic vernacular, the Eurocentric research apparatus views them as "deteriorated," "unsophisticated," or unscientific. Methodological extraction then executes a **"flip and fix"**:
+* **Sanitization and Displacement**: The researcher strips the story of its raw, embodied, emotional, and linguistic context, translating it into a succinct, depersonalized, "scientific" narrative tailored to an affluent Eurocentric academic audience.
+* **Capitalist and Reputation Extraction**: The original storytellers are displaced into ontological muteness at the periphery, while the researcher appropriates their experiences as authored "research findings" or "discoveries". These extracted findings generate prestige, citations, grant funding, and tenure for the academic, as well as journal metrics and copyright profits for the publishing industry.
+
+---
+
+### 2. Storycide (*Historicidio*) and Knowledge Captivity
+If gentrification is the forced renovation of a story, **storycide** (*historicidio*) is its total eradication or devaluation. Storycide occurs when autonomous vernacular knowledge is dismissed as non-existent, illegitimate, or "unscientific" simply because it skipped Eurocentric methodological processing.
+
+The mechanics of this extraction rely on what polanco et al. call "vacuum-packing" (*empacadas al vacío*):
+* **Data-ization**: Extracted stories are de-identified, coded, thematized, "NVivo-ized," and converted into data points.
+* **Knowledge Captivity**: Remnants of participants' lives that do not fit the researcher's immediate analytical agenda or funding scope are locked away in proprietary databases. Left in this state of captivity, unutilized stories eventually undergo storycide years later.
+* **Re-consumption**: In an ironic turn of coloniality, research participants are sometimes placed in a position where they must re-consume their own extracted knowledge from the mouth of the academic, who presents it back to them as "original scientific insight".
+
+---
+
+### 3. The "iCloud Researcher" and the Zero-Point Hubris
+Methodological extraction is sustained by what Santiago Castro-Gómez calls ***la hybris del punto zero*** (the hubris of the zero point). Polanco et al. critique the researcher who operates like an **"iCloud™"**: an unobservable, disembodied observer who appears to exist "everywhere but nowhere," hiding their geopolitical location, racial privilege, and personal complicity behind passive academic phrasing ("data indicates," "research shows"). This zero-point stance brackets out the researcher's humanity while actively extracting and gentrifying the lives of others.
+
+---
+
+### 4. The Decolonial Option: Unfaithfulness and *Ch'ixi*
+To interrupt storycide and gentrification, polanco et al. argue that simply proposing "decolonized" or "artistic" methods within the existing paradigm is insufficient—it remains "the same Columbus agenda, only with a new wardrobe". Instead, they advocate for:
+* **Methodological Infidelity**: Refusing the mandate that stories must be processed through academic methodologies to hold moral and epistemic worthiness. Vernacular stories in English, Spanglish, or art stand on their own feet as legitimate knowledge without requiring academic validation.
+* **Complicitous Witnessing**: Reimagining the academic audience not as analytical judges or code-extractors, but as **witnesses** who allow themselves to be emotionally and ethically troubled by stories of injustice.
+* **Parallel Coexistence (*Ch'ixi*)**: Drawing on Aymara sociologist Silvia Rivera Cusicanqui, they envision a *ch'ixi* framework—a parallel coexistence where Eurocentric methodologies lose their exclusive monopoly on legitimacy, allowing vernacular, autonomous ways of knowing to exist alongside them in mutual, un-assimilated difference.
+
+---

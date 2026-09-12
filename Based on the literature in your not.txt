@@ -1,0 +1,66 @@
+Based on the literature in your notebook, the coding scheme for auditing a qualitative methods manual (such as David L. Altheide's *Qualitative Media Analysis*) should be organized as a **four-tier, multi-layered decolonial coding matrix**. 
+
+This framework moves systematically from literal text transcription to theoretical deconstruction, socio-technical critique, historical cross-referencing, and reconstructive validation.
+
+---
+
+### Tier 1: The Deconstructive Absence Layer (Santos's Monocultures)
+Drawing on Boaventura de Sousa Santos's *sociology of absences*, this layer identifies what forms of knowledge, time, identity, scale, or value are rendered "non-existent" or "unscientific" by the textbook's instructions:
+
+*   **`MONO_KNOWLEDGE` (Monoculture of Knowledge and Rigor)**: Tags instructions that treat Anglo-American empiricist science and formal academic canons as the *only* valid criteria for truth, dismissing vernacular, oral, or spiritual knowledges as "ignorant" or "subjective".
+*   **`MONO_TIME` (Monoculture of Linear Time)**: Tags requirements that enforce linear, chronological progression or modern progress narratives, labeling non-linear, relational, or ancestral temporalities as "backward" or "residual".
+*   **`MONO_CLASS` (Monoculture of Naturalized Classification)**: Tags instances where racial, gendered, or institutional hierarchies are naturalized or treated as objective demographic categories rather than products of historical domination.
+*   **`MONO_SCALE` (Monoculture of the Dominant Scale)**: Tags pressures to abstract or generalize local realities into universal "theoretical codes" or globalized frameworks, treating the local as merely parochial.
+*   **`MONO_PRODUCTIVITY` (Monoculture of Capitalist Productivity)**: Tags guidelines that measure value solely through output, efficiency, or commodified data, discarding non-extractive social or ecological relations as "unproductive".
+
+---
+
+### Tier 2: The Methodological Extraction Layer (polanco et al. & Bennett)
+This tier codes the specific procedural and technical mechanisms used to sanitize and extract data from marginalized participants:
+
+*   **`EXT_GENTRIFICATION` (Knowledge Gentrification / "Flip and Fix")**: Tags guidelines instructing researchers to "renovate" raw, emotional, or vernacular stories (*relatos*) into succinct, "respectable" scientific prose tailored for academic publishing markets.
+*   **`EXT_VACUUM_PACK` (Vacuum-Packing / NVivo-ization)**: Tags procedures that de-contextualize oral accounts by converting them into prepackaged, de-identified, thematized, or software-indexed data points (`NVivo-ized`, `data-ized`).
+*   **`EXT_STORYCIDE` (Storycide / Historicidio / Knowledge Captivity)**: Tags instances where participant stories that fail to fit the researcher's coding protocol or software parameters are discarded as invalid or locked away in proprietary databases.
+*   **`EXT_ZERO_POINT` (Zero-Point Hubris / "iCloud Researcher")**: Tags passive, disembodied language ("the data indicates," "findings demonstrate") that conceals the researcher's geopolitical location, institutional privilege, and personal positionality.
+*   **`EXT_EAD` (English Academic Discourse / Technical Mandate)**: Tags requirements forcing compliance with standardized English publishing norms, proprietary indexing software (e.g., ZyIndex, LEXIS/NEXIS), or institutional research templates.
+
+---
+
+### Tier 3: Historical Bias-Lens Cross-Referencing (Grosfoguel & Trouillot)
+For every monoculture or extraction tag applied, this layer cross-references the specific historical epistemicide or archival silence being reproduced:
+
+*   **`HIST_AL_ANDALUS`**: Links tags to the historical suppression of Arab-Islamic and Jewish intellectual and philosophical traditions during the conquest of Al-Andalus.
+*   **`HIST_INDIGENOUS_GENOCIDE`**: Links tags to the civilizational erasure, dispossession, and euphemistic cataloging of Indigenous peoples in the Americas.
+*   **`HIST_AFRICAN_ENSLAVEMENT`**: Links tags to the ontological reduction, commodification, and archival muteness imposed by the Transatlantic slave trade.
+*   **`HIST_GENDER_WITCH_HUNTS`**: Links tags to the systematic destruction of autonomous, embodied female knowledge practices during European witch trials.
+*   **`SILENCE_MOMENT` (Trouillot Archival Silences)**: Codes where the silence enters the research pipeline: *fact creation* (sources), *fact assembly* (archives/databases), *fact retrieval* (coding/indexing), or *retrospective significance* (interpretation).
+
+---
+
+### Tier 4: The Reconstructive Ecology Pass (Santos's Ecologies & Qualitative Values)
+The final tier maps each identified absence to Santos's corresponding *Ecology* and justifies the restored reading using established qualitative standards:
+
+*   **`ECO_KNOWLEDGES` (Ecology of Knowledges)**: Restores plural, contextual ways of knowing alongside scientific paradigms, validated via Harry Wolcott's standard of **Thick Description**.
+*   **`ECO_TEMPORALITIES` (Ecology of Temporalities)**: Restores cyclical, generational, or non-linear memories, validated via **Historical Contextualization**.
+*   **`ECO_RECOGNITION` (Ecology of Recognition)**: Reclaims "differences among equals" by de-naturalizing social hierarchies.
+*   **`ECO_TRANSSCALE` (Ecology of Trans-Scale)**: Reclaims localized, non-globalized realities, des-globalizing the local to reveal site-specific meanings.
+*   **`ECO_PRODUCTIVITIES` (Ecology of Productivities)**: Reclaims non-capitalist, reciprocal, and communal forms of knowledge generation.
+*   **`QUAL_VALIDITY` (Qualitative Reliability Check)**: Cites explicit qualitative criteria—such as Kirk & Miller's *synchronic reliability*, reflexivity logs, or communicative member-checking—to defend the reconstructive reading.
+
+---
+
+### Organizational Data Workflow
+To implement this in your research website's database, each audited textbook line should be structured as an object containing these four layers:
+
+\\[\text{Audit Record} = \begin{cases} 
+\text{1. Literal Pass} & \text{(Exact quoted string from textbook)} \\
+\text{2. Deconstruction} & \text{(\texttt{MONO\_*} + \texttt{EXT\_*} codes)} \\
+\text{3. Historical Lens} & \text{(\texttt{HIST\_*} + Trouillot Moment)} \\
+\text{4. Reconstruction} & \text{(\texttt{ECO\_*} + Wolcott/Kirk \& Miller value)} 
+\end{cases}\\]
+
+This 4-tier structure ensures that your literature review directly informs a clear, auditable coding scheme for your empirical document analysis.
+
+---
+
+🛠️ Would you like to review how this 4-tier coding scheme maps onto a specific excerpt from David Altheide's *Qualitative Media Analysis* to test the workflow?
