@@ -10,6 +10,8 @@ This project treats a qualitative-research-methods textbook as a **primary docum
 
 Auditing the textbook itself, rather than making an abstract theoretical argument, turns the literature review into a meta-critique of how an academic discipline enforces what Santos calls the "monoculture of knowledge and rigor" — using Altheide's *own* method, **Ethnographic Content Analysis (ECA)** — the reflexive, recursive, constant-comparative analysis of documents — turned back onto his guide.
 
+**Historical scope.** Because the audited work was originally published in 1996, its discussion of Gopher, VCR counters, CD-ROM systems, ZyIndex, and subscription-based research databases is analyzed as part of a specific mid-1990s research infrastructure. The audit does not claim that these tools were old-fashioned for their time. It asks instead whether the method's evidentiary assumptions — indexability, retrievability, standardization, and institutionally available archives — still illuminate durable questions about what becomes researchable knowledge.
+
 ## The Six-Step Operational Coding Protocol
 
 ```

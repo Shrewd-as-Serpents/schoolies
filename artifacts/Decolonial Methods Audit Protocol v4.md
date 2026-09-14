@@ -6,6 +6,10 @@ The primary source audited in this project is David L. Altheide's (1996) *Qualit
 
 Earlier drafts of this protocol referenced a 2013 second edition (Altheide & Schneider) and a "2011 digital edition" label. Both were revised: the SAGE Research Methods record resolving from this DOI lists the publication year as 1996 and the sole author as David L. Altheide. The 2013 second edition is a materially different, co-authored, differently-paginated text (WorldCat OCLC 820790765) and is **not** the object audited here. No unverified print-page crosswalk is presented as a final citation anywhere in this project.
 
+## Historical Scope of the Technology Audit
+
+Because the audited work was originally published in 1996, its discussion of Gopher, VCR counters, CD-ROM systems, ZyIndex, and subscription-based research databases is analyzed as part of a specific mid-1990s research infrastructure. The audit does not claim that these tools were old-fashioned for their time. Its concern is that the method's evidentiary assumptions — such as the value of indexability, retrievability, standardization, and institutionally available archives — may still illuminate durable questions about what becomes researchable knowledge.
+
 ---
 
 ## Abstract & Operational Overview
