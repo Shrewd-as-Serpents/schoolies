@@ -17,6 +17,16 @@
 - Every citation now reads Altheide, D. L. (1996) rather than Altheide (2011) or Altheide & Schneider (2013).
 - All page locators use SRM chapter + SRM PDF page only (e.g., "Ch. 5, p. 11 of 12"); no print-edition page number is used as a final citation anywhere in this project.
 
+**Date-use rule:**
+
+| Project purpose | Date or locator to use | Reason |
+| --- | --- | --- |
+| Formal APA citation and in-text citation for the original monograph | **1996** | Identifies the original work being historically situated and audited. |
+| Audit record IDs | **1996** | Follows the cited source's original publication identity. |
+| Digital-source locators | **2011 SAGE Research Methods platform presentation** | Identifies where the chapter PDF was accessed and verified. |
+| Page citation in the audit matrix | **SRM chapter title + PDF page** | Provides the stable locator for the exact digital artifact in the corpus. |
+| Technological-historical interpretation | **1996 context** | Interprets the cited practices within their mid-1990s research infrastructure, rather than judging them as though introduced in 2011. |
+
 ---
 
 ## 2. Verified externally — background on the discarded 2013 path
