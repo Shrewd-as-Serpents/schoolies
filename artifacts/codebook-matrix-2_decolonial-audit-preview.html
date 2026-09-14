@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decoding Absences — The Coding Matrix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base:#0F172A; --surface:#16213A; --line:#2A3A5C;
+    --text:#E7ECF5; --text-dim:#8C9AB8;
+    --crimson:#EF4444; --crimson-dim:#4A2530;
+    --indigo:#6366F1; --indigo-dim:#2A2C55;
+    --emerald:#10B981; --emerald-dim:#143A32;
+    --amber:#F59E0B; --amber-dim:#4A3820;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--base);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;}
+  .wrap{max-width:900px;margin:0 auto;padding:48px 24px 120px;}
+
+  header{padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:8px;}
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--text-dim);}
+  h1{font-family:'Newsreader',serif;font-weight:500;font-size:clamp(28px,4vw,38px);margin:10px 0 12px;line-height:1.2;}
+  header p{color:var(--text-dim);font-size:15px;margin:0 0 8px;max-width:64ch;}
+  header p:last-child{margin-bottom:0;}
+
+  nav.tier-nav{display:flex;gap:6px;flex-wrap:wrap;margin:24px 0 40px;position:sticky;top:0;background:var(--base);padding:12px 0;z-index:5;}
+  nav.tier-nav a{
+    font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--text-dim);
+    text-decoration:none;border:1px solid var(--line);padding:6px 10px;border-radius:3px;
+  }
+  nav.tier-nav a:hover{border-color:var(--text-dim);color:var(--text);}
+
+  section.tier{margin-bottom:52px;scroll-margin-top:60px;}
+  .tier-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;flex-wrap:wrap;}
+  .tier-num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-dim);}
+  .tier-title{font-family:'Newsreader',serif;font-size:22px;font-weight:500;}
+  .tier-title.crimson{color:var(--crimson);}
+  .tier-title.indigo{color:var(--indigo);}
+  .tier-title.emerald{color:var(--emerald);}
+  .tier-title.amber{color:var(--amber);}
+  .tier-framework{font-size:13px;color:var(--text-dim);margin-bottom:6px;}
+  .tier-note{
+    font-size:13px;color:var(--amber);background:var(--amber-dim);
+    border:1px solid rgba(245,158,11,.35);padding:10px 14px;border-radius:3px;margin-bottom:18px;
+  }
+
+  .code-entry{
+    border-top:1px solid var(--line);padding:16px 0;
+    display:grid;grid-template-columns:200px 1fr;gap:20px;
+  }
+  @media (max-width:640px){ .code-entry{grid-template-columns:1fr;} }
+
+  .code-id{font-family:'JetBrains Mono',monospace;font-size:12.5px;padding-top:2px;}
+  .code-id.crimson{color:var(--crimson);}
+  .code-id.indigo{color:var(--indigo);}
+  .code-id.emerald{color:var(--emerald);}
+  .code-id.amber{color:var(--amber);}
+  .code-id .name{display:block;font-family:'Inter',sans-serif;font-size:12px;color:var(--text-dim);margin-top:3px;font-weight:500;}
+
+  .code-def p{margin:0 0 8px;font-size:14.5px;}
+  .code-def p:last-child{margin-bottom:0;}
+
+  .usage{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+  .usage-tag{
+    font-family:'JetBrains Mono',monospace;font-size:11px;padding:2px 7px;border-radius:3px;
+    background:var(--surface);border:1px solid var(--line);color:var(--text-dim);
+  }
+  .usage-tag.active{color:var(--text);border-color:var(--text-dim);}
+  .status-placeholder{font-size:12.5px;font-style:italic;color:var(--text-dim);}
+
+  .citelink{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--text-dim);}
+
+  footer{margin-top:48px;font-size:12px;color:var(--text-dim);border-top:1px solid var(--line);padding-top:20px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">Decoding Absences · The Coding Matrix</div>
+    <h1>Every code, and where it lands.</h1>
+    <p>This is the finalized instrument as it was actually applied to the 8-record verification queue — not an aspirational superset of it. Two dimensions used in earlier drafts (a fixed extraction-code vocabulary, and a nested-complicity disclosure tier) were dropped entirely when the dataset schema was finalized, rather than kept as unused placeholders, because keeping them would misrepresent what this audit's instrument now measures.</p>
+    <p>Each tier below is either a controlled vocabulary applied consistently across records (Tiers 1, 2, 4) or an inventory of what the audit actually recorded in free text, explicitly not treated as a fixed code set (Tiers 3, 5).</p>
+    <nav class="tier-nav" id="tierNav"></nav>
+  </header>
+
+  <div id="tiers"></div>
+
+  <footer>Reflects <code>sage-audit-data-final.json</code> as of the 1996 edition-identity correction. All 8 records remain in the verification queue (<code>finding_included: false</code>); usage tags below indicate coding application, not promotion to a public finding — see <code>verification-checklist-v2.md</code>.</footer>
+</div>
+
+<script>
+const DATA = {"records": [{"record_id": "SAGE-ALT-1996-CH5-11", "legacy_label": "ZyIndex / Indexing \"One Big File\"", "source_text": {"author": "David L. Altheide", "work": "Qualitative Media Analysis", "year": 1996, "publisher": "SAGE Publications, Inc.", "doi": "https://doi.org/10.4135/9781412985536", "srm_chapter_title": "Chapter 5: Electronic Reality", "srm_chapter_page": "Ch. 5, p. 11 of 12", "notebook_pdf_source": "qualitative-media-analysis (2).pdf", "unit_type": "software_instruction", "literal_excerpt": "Recent software development in word processors and database managers has helped solve this problem of how to manage and study multiple files at once. The solution involves indexing or having your computer 'read and mark' your files so that a few simple commands can basically treat everything stored in files as 'one big file!'... The system I have found useful is called Zyindex... this capacity to search all relevant documents is a terrific way to scan and review materials that often become a source of creative insights, codes, and especially examples."}, "evidence_type": "close_paraphrase", "quote_checked": false, "context_checked": false, "finding_status": "verification_queue", "finding_included": false, "reliability_status": "Candidate Record – quotation and source edition under verification; not included in findings.", "reliability_check": {"quixotic": "not_completed", "diachronic": "not_completed", "synchronic": "not_completed"}, "verification_next_step": "Re-open Chapter 5, SRM PDF p. 11 of 12, and compare the excerpt word-for-word before promoting to verbatim_quote.", "deconstructive_analysis": {"monoculture_tag": "Monoculture of Knowledge and Rigor", "erased_entity": "Non-digitized, oral, embodied, and non-English vernacular archives", "rhetorical_device": "Techno-positivistic efficiency rhetoric", "socio_technical_dependency": "ZyIndex / proprietary indexing software and electronic text corpora", "historical_lens": {"framework": "Grosfoguel (2013) & Trouillot (1995, project shorthand: Fact Assembly)", "note": "Through the project's historical lens, this raises a question about how archival practices make certain experiences legible. This is an interpretive context, not a claim of equivalence.", "citation": "Grosfoguel, 2013, p. 77; Trouillot, 1995, p. 26"}}, "reconstructive_ecology": {"ecology_tag": "Ecology of Knowledges", "restored_presence": "Oral history archives, embodied storytelling, and community-held memory repositories", "qualitative_method_value": "Thick Description & Radical Co-presence", "validation_criterion": "Kirk & Miller (1986) Synchronic Reliability & Member-Checking"}, "reflexive_log": {"coder_positionality": "Audited from a student standpoint recognizing institutional access privilege to SAGE databases.", "timestamp": "2026-09-13T20:05:00-06:00"}}, {"record_id": "SAGE-ALT-1996-CH5-04", "legacy_label": "VCR Counters & Linear Time", "source_text": {"author": "David L. Altheide", "work": "Qualitative Media Analysis", "year": 1996, "publisher": "SAGE Publications, Inc.", "doi": "https://doi.org/10.4135/9781412985536", "srm_chapter_title": "Chapter 5: Electronic Reality", "srm_chapter_page": "Ch. 5, p. 4 of 12", "notebook_pdf_source": "qualitative-media-analysis (2).pdf", "unit_type": "text_passage", "literal_excerpt": "The investigator uses the VCR counter to note the beginning and end of specific segments... allow[ing] the researcher to log time-stamped visual data sequentially across news broadcasts."}, "evidence_type": "close_paraphrase", "quote_checked": false, "context_checked": false, "finding_status": "verification_queue", "finding_included": false, "reliability_status": "Candidate Record – pending literal wording check; not included in findings.", "reliability_check": {"quixotic": "not_completed", "diachronic": "not_completed", "synchronic": "not_completed"}, "verification_next_step": "Compare against Chapter 5, SRM PDF p. 4 of 12, to confirm exact wording before reclassifying as verbatim_quote.", "deconstructive_analysis": {"monoculture_tag": "Monoculture of Linear Time", "erased_entity": "Cyclical, ancestral, relational, and non-linear temporalities of community memory", "rhetorical_device": "Chrono-metric precision and linear causality", "socio_technical_dependency": "Time-stamping software and mechanical video log counters", "historical_lens": {"framework": "Maldonado-Torres (2007) & Santos (2014)", "note": "Through the project's historical lens, this raises a question about how clock-time instrumentation subordinates other temporal orders. This is an interpretive context, not a claim of equivalence.", "citation": "Santos, 2014, p. 125"}}, "reconstructive_ecology": {"ecology_tag": "Ecology of Temporalities", "restored_presence": "Ancestral timeline mapping, multi-generational memory layers, and relational temporalities", "qualitative_method_value": "Diachronic Narrative Integrity", "validation_criterion": "Relational Accountability & Community Storyline Continuity"}, "reflexive_log": {"coder_positionality": "Logged while examining how linear broadcast time stamps can crowd out long-durational, non-linear memory.", "timestamp": "2026-09-13T20:05:00-06:00"}}, {"record_id": "SAGE-ALT-1996-CH3-12", "legacy_label": "Cross-Case Subsumption & Scale", "source_text": {"author": "David L. Altheide", "work": "Qualitative Media Analysis", "year": 1996, "publisher": "SAGE Publications, Inc.", "doi": "https://doi.org/10.4135/9781412985536", "srm_chapter_title": "Chapter 3: Constructing a Protocol & Data Collection", "srm_chapter_page": "Ch. 3, p. 12 of 24", "notebook_pdf_source": "qualitative-media-analysis (5).pdf", "unit_type": "coding_protocol_template", "literal_excerpt": "Codes must be refined until individual concrete examples can be subsumed under general theoretical categories suitable for cross-case comparison."}, "evidence_type": "analytical_summary", "quote_checked": false, "context_checked": false, "finding_status": "verification_queue", "finding_included": false, "reliability_status": "Candidate Record – pending literal wording check; not included in findings.", "reliability_check": {"quixotic": "not_completed", "diachronic": "not_completed", "synchronic": "not_completed"}, "verification_next_step": "Confirm this is a summary (not a direct quotation) against Chapter 3, SRM PDF p. 12 of 24.", "deconstructive_analysis": {"monoculture_tag": "Monoculture of the Dominant Scale", "erased_entity": "Localized, place-based, and context-dependent epistemologies", "rhetorical_device": "Abstraction and universalizing generalization", "socio_technical_dependency": "Cross-case comparison matrix templates", "historical_lens": {"framework": "Castro-Gómez (2005) & Santos (2014)", "note": "Through the project's historical lens, this raises a question about how the pressure to generalize can render site-specific knowledge illegible unless translated into abstract categories. This is an interpretive context, not a claim of equivalence.", "citation": "Santos, 2014, p. 131; Castro-Gómez, 2005, p. 96"}}, "reconstructive_ecology": {"ecology_tag": "Ecology of Trans-scales", "restored_presence": "Vernacular, place-based knowledge ecosystems and site-specific relational realities", "qualitative_method_value": "Contextual Validity & Localized Grounding", "validation_criterion": "Standpoint Specificity & Non-Universalizing Pluriversality"}, "reflexive_log": {"coder_positionality": "Note on how academic pressure to generalize can push researchers to strip unique local context.", "timestamp": "2026-09-13T20:05:00-06:00"}}, {"record_id": "SAGE-ALT-1996-CH5-05", "legacy_label": "LEXIS/NEXIS Corporate Gatekeeping", "source_text": {"author": "David L. Altheide", "work": "Qualitative Media Analysis", "year": 1996, "publisher": "SAGE Publications, Inc.", "doi": "https://doi.org/10.4135/9781412985536", "srm_chapter_title": "Chapter 5: Electronic Reality", "srm_chapter_page": "Ch. 5, p. 5 of 12", "notebook_pdf_source": "qualitative-media-analysis (2).pdf", "unit_type": "text_passage", "literal_excerpt": "Searching electronic news databases like LEXIS/NEXIS ensures that the sampling frame is objective, systematic, and comprehensive across major national news organizations."}, "evidence_type": "analytical_summary", "quote_checked": false, "context_checked": false, "finding_status": "verification_queue", "finding_included": false, "reliability_status": "Candidate Record – pending literal wording check; not included in findings.", "reliability_check": {"quixotic": "not_completed", "diachronic": "not_completed", "synchronic": "not_completed"}, "verification_next_step": "Confirm summary accuracy against Chapter 5, SRM PDF p. 5 of 12, before any promotion.", "deconstructive_analysis": {"monoculture_tag": "Monoculture of Knowledge and Rigor", "erased_entity": "Community-produced media, independent zines, indigenous radio broadcasts, and oral news networks", "rhetorical_device": "Corporate database objectivity framing", "socio_technical_dependency": "LEXIS/NEXIS corporate subscription and proprietary keyword algorithms", "historical_lens": {"framework": "Grosfoguel (2013) & Bennett (2014)", "note": "Through the project's historical lens, this raises a question about how commercial indexing infrastructure narrows what counts as a legitimate news source. This is an interpretive context, not a claim of equivalence.", "citation": "Bennett, 2014, p. 58; Grosfoguel, 2013, p. 77"}}, "reconstructive_ecology": {"ecology_tag": "Ecology of Knowledges", "restored_presence": "Grassroots media archives, vernacular publications, oral testimony repositories, and autonomous community news", "qualitative_method_value": "Pluriversal Source Triangulation", "validation_criterion": "Epistemic Pluralism & Democratized Sampling Frames"}, "reflexive_log": {"coder_positionality": "Reflexive note on paywalled database dependencies in university library search infrastructure.", "timestamp": "2026-09-13T20:05:00-06:00"}}, {"record_id": "SAGE-ALT-1996-CH3-FIG3-2", "legacy_label": "ECA Linear Pipeline Diagram (Figure 3.2)", "source_text": {"author": "David L. Altheide", "work": "Qualitative Media Analysis", "year": 1996, "publisher": "SAGE Publications, Inc.", "doi": "https://doi.org/10.4135/9781412985536", "srm_chapter_title": "Chapter 3: Constructing a Protocol & Data Collection", "srm_chapter_page": "Ch. 3, p. 5 of 24 (Figure 3.2)", "notebook_pdf_source": "qualitative-media-analysis (5).pdf", "unit_type": "flowchart_diagram", "literal_excerpt": "Figure 3.2: The Process of Ethnographic Content Analysis [Linear flow: Document Selection → Protocol Development → Data Collection → Coding → Analysis → Report Writing]"}, "evidence_type": "diagram_description", "quote_checked": false, "context_checked": false, "finding_status": "verification_queue", "finding_included": false, "reliability_status": "Candidate Record – figure identification and description pending verification against the SRM PDF; not included in findings.", "reliability_check": {"quixotic": "not_completed", "diachronic": "not_completed", "synchronic": "not_completed"}, "verification_next_step": "Confirm the figure number, caption, and flow-step labels against Chapter 3, SRM PDF p. 5 of 24, then promote if the description matches exactly.", "deconstructive_analysis": {"monoculture_tag": "Monoculture of Naturalized Classification", "erased_entity": "Participatory co-design, community validation loops, and reciprocal research relationships", "rhetorical_device": "Unidirectional pipeline visual diagramming", "socio_technical_dependency": "Top-down research design flowcharts", "historical_lens": {"framework": "polanco et al. (2020) & Smith (1999)", "note": "Through the project's historical lens, this raises a question about how one-directional research pipelines can cast participants as passive objects of observation. This is an interpretive context, not a claim of equivalence.", "citation": "polanco et al., 2020, p. 80"}}, "reconstructive_ecology": {"ecology_tag": "Ecology of Recognitions", "restored_presence": "Reciprocal research design loops, participant co-analysis, and community member-checking protocol passes", "qualitative_method_value": "Radical Co-presence & Participatory Validity", "validation_criterion": "Member-Checking Consensus & Relational Ethics"}, "reflexive_log": {"coder_positionality": "Deconstructing how textbook visual diagrams socialize students into one-way extractive research roles.", "timestamp": "2026-09-13T20:05:00-06:00"}}, {"record_id": "SAGE-ALT-1996-CH2-06", "legacy_label": "Intercoder Reliability & Novice Labor", "source_text": {"author": "David L. Altheide", "work": "Qualitative Media Analysis", "year": 1996, "publisher": "SAGE Publications, Inc.", "doi": "https://doi.org/10.4135/9781412985536", "srm_chapter_title": "Chapter 2: An Overview of Content Analysis", "srm_chapter_page": "Ch. 2, p. 6 of 13", "notebook_pdf_source": "qualitative-media-analysis (4).pdf", "unit_type": "text_passage", "literal_excerpt": "The primary researcher's role was reduced to setting up the protocol and then analyzing and interpreting data. The data collection and organization (coding) process was carried out by novices hired and quickly trained to find, record, and count the 'mentions' for each unit of analysis. Measures of 'intercoder reliability' would, presumably, show that the research novitiates were really using the same judgmental criteria... The upshot was that reliability produced validity."}, "evidence_type": "close_paraphrase", "quote_checked": false, "context_checked": false, "finding_status": "verification_queue", "finding_included": false, "reliability_status": "Candidate Record – pending literal wording check; not included in findings.", "reliability_check": {"quixotic": "not_completed", "diachronic": "not_completed", "synchronic": "not_completed"}, "verification_next_step": "Compare against Chapter 2, SRM PDF p. 6 of 13, to confirm exact wording before reclassifying as verbatim_quote.", "deconstructive_analysis": {"monoculture_tag": "Monoculture of Knowledge and Rigor", "erased_entity": "Relational understanding, non-quantified story resonance, and deep participant context", "rhetorical_device": "Statistical consensus disguised as truth", "socio_technical_dependency": "Intercoder reliability percentage matrices", "historical_lens": {"framework": "Grosfoguel (2013) & Trouillot (1995, project shorthand: Fact Retrieval)", "note": "Through the project's historical lens, this raises a question about how delegating coding to hired novices can substitute statistical agreement for deeper relational understanding. This is an interpretive context, not a claim of equivalence.", "citation": "Grosfoguel, 2013, p. 77"}}, "reconstructive_ecology": {"ecology_tag": "Ecology of Knowledges", "restored_presence": "Relational comprehension, researcher immersion, and communicative dialogue with storytellers", "qualitative_method_value": "Relational Validity & Deep Qualitative Comprehension", "validation_criterion": "Kirk & Miller Synchronic Reliability & Communicative Validation"}, "reflexive_log": {"coder_positionality": "Audit on the academic temptation to delegate tedious coding to hired assistants.", "timestamp": "2026-09-13T20:05:00-06:00"}}, {"record_id": "SAGE-BEN-2014-P061", "legacy_label": "English Academic Discourse (EAD)", "source_text": {"author": "Karen Bennett", "work": "Towards an Epistemological Monoculture: Mechanisms of Epistemicide in the Global Academic Community", "year": 2014, "publisher": "De Gruyter Mouton", "doi": null, "srm_chapter_title": "Part II: The Discourse Community Scenario", "srm_chapter_page": "Part II, p. 61", "notebook_pdf_source": "English_As_a_Scientific_and_Research_Language_Deba..._----_(Part_II_The_discourse_community_scenario_).pdf", "unit_type": "text_passage", "literal_excerpt": "English Academic Discourse (EAD) enforces strict rules of nominalization, impersonal passive voice, and linear argumentation, coercing non-Western scholars to translate their thought worlds into empiricist templates."}, "evidence_type": "close_paraphrase", "quote_checked": false, "context_checked": false, "finding_status": "verification_queue", "finding_included": false, "reliability_status": "Candidate Record – pending literal wording check; not included in findings.", "reliability_check": {"quixotic": "not_completed", "diachronic": "not_completed", "synchronic": "not_completed"}, "verification_next_step": "Confirm exact wording against the source PDF, Part II, p. 61.", "deconstructive_analysis": {"monoculture_tag": "Monoculture of Knowledge and Rigor", "erased_entity": "Non-English scholarly traditions, poetic/narrative modes of inquiry, and oral epistemologies", "rhetorical_device": "Linguistic policing under the banner of clarity and academic style", "socio_technical_dependency": "EAD peer-review templates and journal style guides", "historical_lens": {"framework": "Bennett (2014) & Santos (2014)", "note": "Through the project's historical lens, this raises a question about how a single academic-English register can function as a gatekeeping mechanism. This is an interpretive context, not a claim of equivalence.", "citation": "Bennett, 2014, p. 61; Santos, 2014, p. 106"}}, "reconstructive_ecology": {"ecology_tag": "Ecology of Knowledges", "restored_presence": "Multilingual academic discourse, indigenous narrative styling, bilingual research publishing, and oral scholarship", "qualitative_method_value": "Linguistic Diversity & Epistemic Translatability", "validation_criterion": "Dialogic Translation & Cultural Authenticity"}, "reflexive_log": {"coder_positionality": "Audit of how English grammar requirements in academic publishing act as gatekeeping mechanisms.", "timestamp": "2026-09-13T20:05:00-06:00"}}, {"record_id": "SAGE-POL-2020-P084", "legacy_label": "Vacuum-Packing & NVivo Node Trees", "source_text": {"author": "marcela polanco et al.", "work": "How to Be Unfaithful to Eurocentric Qualitative Research", "year": 2020, "publisher": null, "doi": null, "srm_chapter_title": "Section 3: Methodological Infidelity and Un-packaging", "srm_chapter_page": "Section 3, p. 84", "notebook_pdf_source": "How_to_Be_Unfaithful_to_Euroce.pdf", "unit_type": "text_passage", "literal_excerpt": "Qualitative software imports raw human stories and 'vacuum-packs' them into node hierarchies, stripping the voice of its ancestral home to transform living testimony into manageable data chunks."}, "evidence_type": "close_paraphrase", "quote_checked": false, "context_checked": false, "finding_status": "verification_queue", "finding_included": false, "reliability_status": "Candidate Record – pending literal wording check; not included in findings.", "reliability_check": {"quixotic": "not_completed", "diachronic": "not_completed", "synchronic": "not_completed"}, "verification_next_step": "Confirm exact wording against the source PDF, Section 3, p. 84.", "deconstructive_analysis": {"monoculture_tag": "Monoculture of Capitalist Productivity", "erased_entity": "Living human connection, embodied affect, and relational responsibility of storytelling", "rhetorical_device": "Efficiency-oriented extraction and commodification of narratives", "socio_technical_dependency": "NVivo / MAXQDA node trees and automated coding algorithms", "historical_lens": {"framework": "polanco et al. (2020)", "note": "Through the project's historical lens, this raises a question about how coding software can fragment testimony into decontextualized chunks. This is an interpretive context, not a claim of equivalence.", "citation": "polanco et al., 2020, p. 84"}}, "reconstructive_ecology": {"ecology_tag": "Ecology of Productivities", "restored_presence": "Non-extractive storying, relational listening sessions, un-chunked narrative preservation, and sacred testimony protocols", "qualitative_method_value": "Relational Accountability & Non-Extractive Inquiry", "validation_criterion": "Storyteller Consent & Ethical Un-packaging"}, "reflexive_log": {"coder_positionality": "Logged while reflecting on the loss of emotional nuance when qualitative software fragments interview transcripts.", "timestamp": "2026-09-13T20:05:00-06:00"}}], "references": {"REF-ALT-1996": "Altheide, D. L. (1996). Qualitative media analysis (Qualitative Research Methods Series, Vol. 38). SAGE Publications, Inc. https://doi.org/10.4135/9781412985536", "REF-BEN-2014": "Bennett, K. (2014). Toward an epistemological monoculture: Mechanisms of epistemicide in European research publication. In R. Plo Alastrué & C. Pérez-Llantada (Eds.), English as a scientific and research language: Debates and discourses (pp. 9–35). De Gruyter Mouton.", "REF-BER-1971": "Berman, S. (1971). Prejudices and antipathies: A tract on the LC subject heads concerning people. Scarecrow Press.", "REF-CAS-2005": "Castro-Gómez, S. (2005). La hybris del punto cero: Ciencia, raza e ilustración en la Nueva Granada (1750–1816). Editorial Pontificia Universidad Javeriana.", "REF-DAN-1998": "Danticat, E. (1998). The farming of bones. Soho Press.", "REF-DUA-2015": "Duarte, M. E., & Belarde-Lewis, M. (2015). Imagining: Creating spaces for indigenous ontologies. Cataloging & Classification Quarterly, 53(5–6), 677–702. https://doi.org/10.1080/01639374.2015.1018396", "REF-GRO-2013": "Grosfoguel, R. (2013). The structure of knowledge in westernized universities: Epistemic racism/sexism and the four genocides/epistemicides of the long 16th century. Human Architecture: Journal of the Sociology of Self-Knowledge, 11(1), 73–90.", "REF-HAR-2008": "Hartman, S. V. (2008). Venus in two acts. Small Axe, 12(2), 1–14. https://doi.org/10.1215/-12-2-1", "REF-KIR-1986": "Kirk, J., & Miller, M. L. (1986). Reliability and validity in qualitative research. SAGE Publications, Inc. https://doi.org/10.4135/9781412985659", "REF-MAL-2007": "Maldonado-Torres, N. (2007). On the coloniality of being: Contributions to the development of a concept. Cultural Studies, 21(2–3), 240–270. https://doi.org/10.1080/09502380601162548", "REF-OLS-2002": "Olson, H. A. (2002). The power to name: Locating the limits of subject representation in libraries. Kluwer Academic Publishers.", "REF-PAT-2021": "Patin, B., Sebastian, M., Yeon, J., Bertolini, D., & Grimm, A. (2021). Interrupting epistemicide: A practical framework for naming, identifying, and ending epistemic injustice in the information professions. Journal of the Association for Information Science and Technology, 72(10), 1306–1318. https://doi.org/10.1002/asi.24479", "REF-POL-2020": "polanco, m., Hanson, N. D., Hernandez, C., Le Feber, T., Medina, S., Old Bucher, S., Rivera, E. I., Rodriguez, I., Vela, E., Velasco, B., & Le Feber, J. (2020). How to be unfaithful to Eurocentrism: A Spanglish decolonial critique to knowledge gentrification, captivity and storycide in qualitative research. The Qualitative Report, 25(1), 145–165. https://doi.org/10.46743/2160-3715/2020.4098", "REF-SAN-2014": "Santos, B. de S. (2014). Epistemologies of the South: Justice against epistemicide. Paradigm Publishers.", "REF-SMI-1999": "Smith, L. T. (1999). Decolonizing methodologies: Research and Indigenous peoples. Zed Books; University of Otago Press.", "REF-SUT-2021": "Sutherland, T. (2021). Making a killing: On race, ritual, and (re)membering in digital capitalism. Feminist Media Studies, 21(1), 133–149. https://doi.org/10.1080/14680777.2020.1826080", "REF-TRO-1995": "Trouillot, M.-R. (1995). Silencing the past: Power and the production of history. Beacon Press.", "REF-WOL-2009": "Wolcott, H. F. (2009). Writing up qualitative research (3rd ed.). SAGE Publications, Inc."}, "apa_short": {"REF-ALT-1996": "(Altheide, 1996)", "REF-BEN-2014": "(Bennett, 2014)", "REF-BER-1971": "(Berman, 1971)", "REF-CAS-2005": "(Castro-Gómez, 2005)", "REF-DAN-1998": "(Danticat, 1998)", "REF-DUA-2015": "(Duarte & Belarde-Lewis, 2015)", "REF-GRO-2013": "(Grosfoguel, 2013)", "REF-HAR-2008": "(Hartman, 2008)", "REF-KIR-1986": "(Kirk & Miller, 1986)", "REF-MAL-2007": "(Maldonado-Torres, 2007)", "REF-OLS-2002": "(Olson, 2002)", "REF-PAT-2021": "(Patin et al., 2021)", "REF-POL-2020": "(polanco et al., 2020)", "REF-SAN-2014": "(Santos, 2014)", "REF-SMI-1999": "(Smith, 1999)", "REF-SUT-2021": "(Sutherland, 2021)", "REF-TRO-1995": "(Trouillot, 1995)", "REF-WOL-2009": "(Wolcott, 2009)"}, "codebook": {"monocultures": {"Monoculture of Knowledge and Rigor": "Tags passages that treat Anglo-American empiricist science and formal academic canons as the only valid criteria for truth, dismissing vernacular, oral, or spiritual knowledges as ignorant or unscientific.", "Monoculture of Linear Time": "Tags requirements that enforce linear, chronological progression, labeling non-linear, relational, or ancestral temporalities as backward, obsolete, or residual.", "Monoculture of the Dominant Scale": "Tags pressure to abstract local realities into universal 'theoretical codes' or globalized frameworks, treating the local as merely parochial.", "Monoculture of Naturalized Classification": "Tags instances where a single classificatory or procedural schema (e.g., a linear diagram or fixed step sequence) is naturalized as objective methodological order rather than one interpretive framework among many.", "Monoculture of Capitalist Productivity": "Tags guidelines that measure value solely through output, efficiency, or commodified data, discarding non-extractive social relations as unproductive."}, "ecologies": {"Ecology of Knowledges": "Restores plural, contextual ways of knowing alongside scientific paradigms, validated via thick description and community-grounded methods.", "Ecology of Temporalities": "Restores cyclical, generational, ancestral, or relational memory systems set aside by linear chronological ordering.", "Ecology of Trans-scales": "Restores site-specific, localized, and vernacular knowledge as valid on its own terms rather than requiring translation into universal categories.", "Ecology of Recognitions": "Reclaims 'differences among equals' by de-naturalizing hierarchies imposed through one-directional classification or research design.", "Ecology of Productivities": "Reclaims non-capitalist, reciprocal, and communal forms of knowledge generation and exchange."}, "evidence_types": {"verbatim_quote": "The excerpt has been checked character-for-character against the SRM PDF and can be cited as an exact quotation.", "close_paraphrase": "The excerpt restates the source's content closely but has not yet been checked word-for-word against the SRM PDF.", "analytical_summary": "The excerpt is the auditor's summary of the source's argument or procedure, not a paraphrase of specific sentences.", "diagram_description": "The excerpt describes a figure, table, or diagram rather than running text."}}};
+const CITE_MAP = [["Grosfoguel", "REF-GRO-2013"], ["Trouillot", "REF-TRO-1995"], ["Maldonado-Torres", "REF-MAL-2007"], ["Santos", "REF-SAN-2014"], ["Castro-G\\u00f3mez", "REF-CAS-2005"], ["Bennett", "REF-BEN-2014"], ["polanco", "REF-POL-2020"], ["Smith", "REF-SMI-1999"], ["Kirk", "REF-KIR-1986"], ["Wolcott", "REF-WOL-2009"], ["Hartman", "REF-HAR-2008"]].map(([pat, key]) => [new RegExp(pat), key]);
+const cite = id => DATA.references[id] || id;
+const apaShort = id => DATA.apa_short?.[id] || '';
+
+const TIERS = [
+  { key:'monocultures', num:'Tier 1', title:'Monocultures of Absence', color:'crimson', anchor:'t1',
+    framework:'Santos (2014), Epistemologies of the South — coded field: deconstructive_analysis.monoculture_tag' },
+  { key:'evidence_types', num:'Tier 2', title:'Evidence-Type Classification', color:'amber', anchor:'t2',
+    framework:'Internal audit-integrity control — coded field: evidence_type',
+    note:'Added in the finalized schema to replace broad, undifferentiated claims of verification. Every record must carry exactly one of these four values; none may be inferred.' },
+  { key:'historical_lenses', num:'Tier 3', title:'Historical Lens Citations', color:'crimson', anchor:'t3',
+    framework:'Grosfoguel (2013); Trouillot (1995, project shorthand); Maldonado-Torres (2007) — free-text field: deconstructive_analysis.historical_lens',
+    note:'Not a fixed code list. Each record cites the historical-lens scholarship its coder judged relevant, framed explicitly as an interpretive comparison, never a claim of historical equivalence. Listed here by cited author, not by enum.' },
+  { key:'ecologies', num:'Tier 4', title:'Reconstructive Ecologies', color:'emerald', anchor:'t4',
+    framework:'Santos (2014), Epistemologies of the South — coded field: reconstructive_ecology.ecology_tag' },
+  { key:'dependencies', num:'Tier 5', title:'Socio-Technical Dependencies', color:'indigo', anchor:'t5',
+    framework:'Free-text inventory — field: deconstructive_analysis.socio_technical_dependency',
+    note:'Not a controlled vocabulary. This tier lists the specific named systems, software, or standardized templates each record identifies, in the record\'s own words, rather than mapping them onto a fixed mechanism-type enum.' },
+];
+
+function usedByRecords(matchFn){
+  return DATA.records.filter(matchFn).map(r => r.record_id);
+}
+
+function codeEntryHTML(id, name, def, color, usage){
+  const usageHTML = usage.length
+    ? `<div class="usage">${usage.map(rid => `<span class="usage-tag active">${rid}</span>`).join('')}</div>`
+    : `<div class="status-placeholder">Not used in any of the 8 finalized records.</div>`;
+  return `
+    <div class="code-entry">
+      <div class="code-id ${color}">${id}<span class="name">${name}</span></div>
+      <div class="code-def">
+        <p>${def}</p>
+        ${usageHTML}
+      </div>
+    </div>`;
+}
+
+function renderNav(){
+  document.getElementById('tierNav').innerHTML = TIERS.map(t => `<a href="#${t.anchor}">${t.num}</a>`).join('');
+}
+
+function renderTiers(){
+  const container = document.getElementById('tiers');
+  container.innerHTML = '';
+
+  TIERS.forEach(t => {
+    const section = document.createElement('section');
+    section.className = 'tier';
+    section.id = t.anchor;
+
+    let bodyHTML = '';
+
+    if(t.key === 'monocultures'){
+      bodyHTML = Object.entries(DATA.codebook.monocultures).map(([name, def]) =>
+        codeEntryHTML(name, 'Monoculture', def, t.color, usedByRecords(r => r.deconstructive_analysis.monoculture_tag === name))
+      ).join('');
+    }
+
+    if(t.key === 'evidence_types'){
+      bodyHTML = Object.entries(DATA.codebook.evidence_types).map(([name, def]) =>
+        codeEntryHTML(name.replace(/_/g,' '), 'Evidence Type', def, t.color, usedByRecords(r => r.evidence_type === name))
+      ).join('');
+    }
+
+    if(t.key === 'ecologies'){
+      bodyHTML = Object.entries(DATA.codebook.ecologies).map(([name, def]) =>
+        codeEntryHTML(name, 'Ecology', def, t.color, usedByRecords(r => r.reconstructive_ecology.ecology_tag === name))
+      ).join('');
+    }
+
+    if(t.key === 'historical_lenses'){
+      const seen = {};
+      DATA.records.forEach(r => {
+        const lens = r.deconstructive_analysis.historical_lens;
+        const text = lens.framework + ' ' + lens.citation;
+        CITE_MAP.forEach(([re, key]) => {
+          if(re.test(text)){
+            seen[key] = seen[key] || [];
+            seen[key].push(r.record_id);
+          }
+        });
+      });
+      bodyHTML = Object.entries(seen).map(([refKey, recIds]) =>
+        codeEntryHTML(apaShort(refKey) || refKey, 'Cited in historical-lens framing', cite(refKey), t.color, recIds)
+      ).join('');
+    }
+
+    if(t.key === 'dependencies'){
+      const seen = {};
+      DATA.records.forEach(r => {
+        const dep = r.deconstructive_analysis.socio_technical_dependency;
+        seen[dep] = seen[dep] || [];
+        seen[dep].push(r.record_id);
+      });
+      bodyHTML = Object.entries(seen).map(([dep, recIds]) =>
+        codeEntryHTML(dep, 'Named system or practice', 'Named in the record\'s deconstructive analysis as the specific infrastructural mechanism the excerpt\'s erasure depends on.', t.color, recIds)
+      ).join('');
+    }
+
+    section.innerHTML = `
+      <div class="tier-head">
+        <span class="tier-num">${t.num}</span>
+        <span class="tier-title ${t.color}">${t.title}</span>
+      </div>
+      <div class="tier-framework">${t.framework}</div>
+      ${t.note ? `<div class="tier-note">${t.note}</div>` : ''}
+      ${bodyHTML}
+    `;
+    container.appendChild(section);
+  });
+}
+
+renderNav();
+renderTiers();
+</script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://perplexity.localhost","http://localhost:1420","http://127.0.0.1:1420","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>

@@ -1,0 +1,394 @@
+[
+  {
+    "record_id": "SAGE-ALT-1996-CH5-11",
+    "legacy_label": "ZyIndex / Indexing \"One Big File\"",
+    "source_text": {
+      "author": "David L. Altheide",
+      "work": "Qualitative Media Analysis",
+      "year": 1996,
+      "publisher": "SAGE Publications, Inc.",
+      "doi": "https://doi.org/10.4135/9781412985536",
+      "srm_chapter_title": "Chapter 5: Electronic Reality",
+      "srm_chapter_page": "Ch. 5, p. 11 of 12",
+      "notebook_pdf_source": "qualitative-media-analysis (2).pdf",
+      "unit_type": "software_instruction",
+      "literal_excerpt": "Recent software development in word processors and database managers has helped solve this problem of how to manage and study multiple files at once. The solution involves indexing or having your computer 'read and mark' your files so that a few simple commands can basically treat everything stored in files as 'one big file!'... The system I have found useful is called Zyindex... this capacity to search all relevant documents is a terrific way to scan and review materials that often become a source of creative insights, codes, and especially examples."
+    },
+    "evidence_type": "close_paraphrase",
+    "quote_checked": false,
+    "context_checked": false,
+    "finding_status": "verification_queue",
+    "finding_included": false,
+    "reliability_status": "Candidate Record – quotation and source edition under verification; not included in findings.",
+    "reliability_check": {
+      "quixotic": "not_completed",
+      "diachronic": "not_completed",
+      "synchronic": "not_completed"
+    },
+    "verification_next_step": "Re-open Chapter 5, SRM PDF p. 11 of 12, and compare the excerpt word-for-word before promoting to verbatim_quote.",
+    "deconstructive_analysis": {
+      "monoculture_tag": "Monoculture of Knowledge and Rigor",
+      "erased_entity": "Non-digitized, oral, embodied, and non-English vernacular archives",
+      "rhetorical_device": "Techno-positivistic efficiency rhetoric",
+      "socio_technical_dependency": "ZyIndex / proprietary indexing software and electronic text corpora",
+      "historical_lens": {
+        "framework": "Grosfoguel (2013) & Trouillot (1995, project shorthand: Fact Assembly)",
+        "note": "Through the project's historical lens, this raises a question about how archival practices make certain experiences legible. This is an interpretive context, not a claim of equivalence.",
+        "citation": "Grosfoguel, 2013, p. 77; Trouillot, 1995, p. 26"
+      }
+    },
+    "reconstructive_ecology": {
+      "ecology_tag": "Ecology of Knowledges",
+      "restored_presence": "Oral history archives, embodied storytelling, and community-held memory repositories",
+      "qualitative_method_value": "Thick Description & Radical Co-presence",
+      "validation_criterion": "Kirk & Miller (1986) Synchronic Reliability & Member-Checking"
+    },
+    "reflexive_log": {
+      "coder_positionality": "Audited from a student standpoint recognizing institutional access privilege to SAGE databases.",
+      "timestamp": "2026-09-13T20:05:00-06:00"
+    }
+  },
+  {
+    "record_id": "SAGE-ALT-1996-CH5-04",
+    "legacy_label": "VCR Counters & Linear Time",
+    "source_text": {
+      "author": "David L. Altheide",
+      "work": "Qualitative Media Analysis",
+      "year": 1996,
+      "publisher": "SAGE Publications, Inc.",
+      "doi": "https://doi.org/10.4135/9781412985536",
+      "srm_chapter_title": "Chapter 5: Electronic Reality",
+      "srm_chapter_page": "Ch. 5, p. 4 of 12",
+      "notebook_pdf_source": "qualitative-media-analysis (2).pdf",
+      "unit_type": "text_passage",
+      "literal_excerpt": "The investigator uses the VCR counter to note the beginning and end of specific segments... allow[ing] the researcher to log time-stamped visual data sequentially across news broadcasts."
+    },
+    "evidence_type": "close_paraphrase",
+    "quote_checked": false,
+    "context_checked": false,
+    "finding_status": "verification_queue",
+    "finding_included": false,
+    "reliability_status": "Candidate Record – pending literal wording check; not included in findings.",
+    "reliability_check": {
+      "quixotic": "not_completed",
+      "diachronic": "not_completed",
+      "synchronic": "not_completed"
+    },
+    "verification_next_step": "Compare against Chapter 5, SRM PDF p. 4 of 12, to confirm exact wording before reclassifying as verbatim_quote.",
+    "deconstructive_analysis": {
+      "monoculture_tag": "Monoculture of Linear Time",
+      "erased_entity": "Cyclical, ancestral, relational, and non-linear temporalities of community memory",
+      "rhetorical_device": "Chrono-metric precision and linear causality",
+      "socio_technical_dependency": "Time-stamping software and mechanical video log counters",
+      "historical_lens": {
+        "framework": "Maldonado-Torres (2007) & Santos (2014)",
+        "note": "Through the project's historical lens, this raises a question about how clock-time instrumentation subordinates other temporal orders. This is an interpretive context, not a claim of equivalence.",
+        "citation": "Santos, 2014, p. 125"
+      }
+    },
+    "reconstructive_ecology": {
+      "ecology_tag": "Ecology of Temporalities",
+      "restored_presence": "Ancestral timeline mapping, multi-generational memory layers, and relational temporalities",
+      "qualitative_method_value": "Diachronic Narrative Integrity",
+      "validation_criterion": "Relational Accountability & Community Storyline Continuity"
+    },
+    "reflexive_log": {
+      "coder_positionality": "Logged while examining how linear broadcast time stamps can crowd out long-durational, non-linear memory.",
+      "timestamp": "2026-09-13T20:05:00-06:00"
+    }
+  },
+  {
+    "record_id": "SAGE-ALT-1996-CH3-12",
+    "legacy_label": "Cross-Case Subsumption & Scale",
+    "source_text": {
+      "author": "David L. Altheide",
+      "work": "Qualitative Media Analysis",
+      "year": 1996,
+      "publisher": "SAGE Publications, Inc.",
+      "doi": "https://doi.org/10.4135/9781412985536",
+      "srm_chapter_title": "Chapter 3: Constructing a Protocol & Data Collection",
+      "srm_chapter_page": "Ch. 3, p. 12 of 24",
+      "notebook_pdf_source": "qualitative-media-analysis (5).pdf",
+      "unit_type": "coding_protocol_template",
+      "literal_excerpt": "Codes must be refined until individual concrete examples can be subsumed under general theoretical categories suitable for cross-case comparison."
+    },
+    "evidence_type": "analytical_summary",
+    "quote_checked": false,
+    "context_checked": false,
+    "finding_status": "verification_queue",
+    "finding_included": false,
+    "reliability_status": "Candidate Record – pending literal wording check; not included in findings.",
+    "reliability_check": {
+      "quixotic": "not_completed",
+      "diachronic": "not_completed",
+      "synchronic": "not_completed"
+    },
+    "verification_next_step": "Confirm this is a summary (not a direct quotation) against Chapter 3, SRM PDF p. 12 of 24.",
+    "deconstructive_analysis": {
+      "monoculture_tag": "Monoculture of the Dominant Scale",
+      "erased_entity": "Localized, place-based, and context-dependent epistemologies",
+      "rhetorical_device": "Abstraction and universalizing generalization",
+      "socio_technical_dependency": "Cross-case comparison matrix templates",
+      "historical_lens": {
+        "framework": "Castro-Gómez (2005) & Santos (2014)",
+        "note": "Through the project's historical lens, this raises a question about how the pressure to generalize can render site-specific knowledge illegible unless translated into abstract categories. This is an interpretive context, not a claim of equivalence.",
+        "citation": "Santos, 2014, p. 131; Castro-Gómez, 2005, p. 96"
+      }
+    },
+    "reconstructive_ecology": {
+      "ecology_tag": "Ecology of Trans-scales",
+      "restored_presence": "Vernacular, place-based knowledge ecosystems and site-specific relational realities",
+      "qualitative_method_value": "Contextual Validity & Localized Grounding",
+      "validation_criterion": "Standpoint Specificity & Non-Universalizing Pluriversality"
+    },
+    "reflexive_log": {
+      "coder_positionality": "Note on how academic pressure to generalize can push researchers to strip unique local context.",
+      "timestamp": "2026-09-13T20:05:00-06:00"
+    }
+  },
+  {
+    "record_id": "SAGE-ALT-1996-CH5-05",
+    "legacy_label": "LEXIS/NEXIS Corporate Gatekeeping",
+    "source_text": {
+      "author": "David L. Altheide",
+      "work": "Qualitative Media Analysis",
+      "year": 1996,
+      "publisher": "SAGE Publications, Inc.",
+      "doi": "https://doi.org/10.4135/9781412985536",
+      "srm_chapter_title": "Chapter 5: Electronic Reality",
+      "srm_chapter_page": "Ch. 5, p. 5 of 12",
+      "notebook_pdf_source": "qualitative-media-analysis (2).pdf",
+      "unit_type": "text_passage",
+      "literal_excerpt": "Searching electronic news databases like LEXIS/NEXIS ensures that the sampling frame is objective, systematic, and comprehensive across major national news organizations."
+    },
+    "evidence_type": "analytical_summary",
+    "quote_checked": false,
+    "context_checked": false,
+    "finding_status": "verification_queue",
+    "finding_included": false,
+    "reliability_status": "Candidate Record – pending literal wording check; not included in findings.",
+    "reliability_check": {
+      "quixotic": "not_completed",
+      "diachronic": "not_completed",
+      "synchronic": "not_completed"
+    },
+    "verification_next_step": "Confirm summary accuracy against Chapter 5, SRM PDF p. 5 of 12, before any promotion.",
+    "deconstructive_analysis": {
+      "monoculture_tag": "Monoculture of Knowledge and Rigor",
+      "erased_entity": "Community-produced media, independent zines, indigenous radio broadcasts, and oral news networks",
+      "rhetorical_device": "Corporate database objectivity framing",
+      "socio_technical_dependency": "LEXIS/NEXIS corporate subscription and proprietary keyword algorithms",
+      "historical_lens": {
+        "framework": "Grosfoguel (2013) & Bennett (2014)",
+        "note": "Through the project's historical lens, this raises a question about how commercial indexing infrastructure narrows what counts as a legitimate news source. This is an interpretive context, not a claim of equivalence.",
+        "citation": "Bennett, 2014, p. 58; Grosfoguel, 2013, p. 77"
+      }
+    },
+    "reconstructive_ecology": {
+      "ecology_tag": "Ecology of Knowledges",
+      "restored_presence": "Grassroots media archives, vernacular publications, oral testimony repositories, and autonomous community news",
+      "qualitative_method_value": "Pluriversal Source Triangulation",
+      "validation_criterion": "Epistemic Pluralism & Democratized Sampling Frames"
+    },
+    "reflexive_log": {
+      "coder_positionality": "Reflexive note on paywalled database dependencies in university library search infrastructure.",
+      "timestamp": "2026-09-13T20:05:00-06:00"
+    }
+  },
+  {
+    "record_id": "SAGE-ALT-1996-CH3-FIG3-2",
+    "legacy_label": "ECA Linear Pipeline Diagram (Figure 3.2)",
+    "source_text": {
+      "author": "David L. Altheide",
+      "work": "Qualitative Media Analysis",
+      "year": 1996,
+      "publisher": "SAGE Publications, Inc.",
+      "doi": "https://doi.org/10.4135/9781412985536",
+      "srm_chapter_title": "Chapter 3: Constructing a Protocol & Data Collection",
+      "srm_chapter_page": "Ch. 3, p. 5 of 24 (Figure 3.2)",
+      "notebook_pdf_source": "qualitative-media-analysis (5).pdf",
+      "unit_type": "flowchart_diagram",
+      "literal_excerpt": "Figure 3.2: The Process of Ethnographic Content Analysis [Linear flow: Document Selection → Protocol Development → Data Collection → Coding → Analysis → Report Writing]"
+    },
+    "evidence_type": "diagram_description",
+    "quote_checked": false,
+    "context_checked": false,
+    "finding_status": "verification_queue",
+    "finding_included": false,
+    "reliability_status": "Candidate Record – figure identification and description pending verification against the SRM PDF; not included in findings.",
+    "reliability_check": {
+      "quixotic": "not_completed",
+      "diachronic": "not_completed",
+      "synchronic": "not_completed"
+    },
+    "verification_next_step": "Confirm the figure number, caption, and flow-step labels against Chapter 3, SRM PDF p. 5 of 24, then promote if the description matches exactly.",
+    "deconstructive_analysis": {
+      "monoculture_tag": "Monoculture of Naturalized Classification",
+      "erased_entity": "Participatory co-design, community validation loops, and reciprocal research relationships",
+      "rhetorical_device": "Unidirectional pipeline visual diagramming",
+      "socio_technical_dependency": "Top-down research design flowcharts",
+      "historical_lens": {
+        "framework": "polanco et al. (2020) & Smith (1999)",
+        "note": "Through the project's historical lens, this raises a question about how one-directional research pipelines can cast participants as passive objects of observation. This is an interpretive context, not a claim of equivalence.",
+        "citation": "polanco et al., 2020, p. 80"
+      }
+    },
+    "reconstructive_ecology": {
+      "ecology_tag": "Ecology of Recognitions",
+      "restored_presence": "Reciprocal research design loops, participant co-analysis, and community member-checking protocol passes",
+      "qualitative_method_value": "Radical Co-presence & Participatory Validity",
+      "validation_criterion": "Member-Checking Consensus & Relational Ethics"
+    },
+    "reflexive_log": {
+      "coder_positionality": "Deconstructing how textbook visual diagrams socialize students into one-way extractive research roles.",
+      "timestamp": "2026-09-13T20:05:00-06:00"
+    }
+  },
+  {
+    "record_id": "SAGE-ALT-1996-CH2-06",
+    "legacy_label": "Intercoder Reliability & Novice Labor",
+    "source_text": {
+      "author": "David L. Altheide",
+      "work": "Qualitative Media Analysis",
+      "year": 1996,
+      "publisher": "SAGE Publications, Inc.",
+      "doi": "https://doi.org/10.4135/9781412985536",
+      "srm_chapter_title": "Chapter 2: An Overview of Content Analysis",
+      "srm_chapter_page": "Ch. 2, p. 6 of 13",
+      "notebook_pdf_source": "qualitative-media-analysis (4).pdf",
+      "unit_type": "text_passage",
+      "literal_excerpt": "The primary researcher's role was reduced to setting up the protocol and then analyzing and interpreting data. The data collection and organization (coding) process was carried out by novices hired and quickly trained to find, record, and count the 'mentions' for each unit of analysis. Measures of 'intercoder reliability' would, presumably, show that the research novitiates were really using the same judgmental criteria... The upshot was that reliability produced validity."
+    },
+    "evidence_type": "close_paraphrase",
+    "quote_checked": false,
+    "context_checked": false,
+    "finding_status": "verification_queue",
+    "finding_included": false,
+    "reliability_status": "Candidate Record – pending literal wording check; not included in findings.",
+    "reliability_check": {
+      "quixotic": "not_completed",
+      "diachronic": "not_completed",
+      "synchronic": "not_completed"
+    },
+    "verification_next_step": "Compare against Chapter 2, SRM PDF p. 6 of 13, to confirm exact wording before reclassifying as verbatim_quote.",
+    "deconstructive_analysis": {
+      "monoculture_tag": "Monoculture of Knowledge and Rigor",
+      "erased_entity": "Relational understanding, non-quantified story resonance, and deep participant context",
+      "rhetorical_device": "Statistical consensus disguised as truth",
+      "socio_technical_dependency": "Intercoder reliability percentage matrices",
+      "historical_lens": {
+        "framework": "Grosfoguel (2013) & Trouillot (1995, project shorthand: Fact Retrieval)",
+        "note": "Through the project's historical lens, this raises a question about how delegating coding to hired novices can substitute statistical agreement for deeper relational understanding. This is an interpretive context, not a claim of equivalence.",
+        "citation": "Grosfoguel, 2013, p. 77"
+      }
+    },
+    "reconstructive_ecology": {
+      "ecology_tag": "Ecology of Knowledges",
+      "restored_presence": "Relational comprehension, researcher immersion, and communicative dialogue with storytellers",
+      "qualitative_method_value": "Relational Validity & Deep Qualitative Comprehension",
+      "validation_criterion": "Kirk & Miller Synchronic Reliability & Communicative Validation"
+    },
+    "reflexive_log": {
+      "coder_positionality": "Audit on the academic temptation to delegate tedious coding to hired assistants.",
+      "timestamp": "2026-09-13T20:05:00-06:00"
+    }
+  },
+  {
+    "record_id": "SAGE-BEN-2014-P061",
+    "legacy_label": "English Academic Discourse (EAD)",
+    "source_text": {
+      "author": "Karen Bennett",
+      "work": "Towards an Epistemological Monoculture: Mechanisms of Epistemicide in the Global Academic Community",
+      "year": 2014,
+      "publisher": "De Gruyter Mouton",
+      "doi": null,
+      "srm_chapter_title": "Part II: The Discourse Community Scenario",
+      "srm_chapter_page": "Part II, p. 61",
+      "notebook_pdf_source": "English_As_a_Scientific_and_Research_Language_Deba..._----_(Part_II_The_discourse_community_scenario_).pdf",
+      "unit_type": "text_passage",
+      "literal_excerpt": "English Academic Discourse (EAD) enforces strict rules of nominalization, impersonal passive voice, and linear argumentation, coercing non-Western scholars to translate their thought worlds into empiricist templates."
+    },
+    "evidence_type": "close_paraphrase",
+    "quote_checked": false,
+    "context_checked": false,
+    "finding_status": "verification_queue",
+    "finding_included": false,
+    "reliability_status": "Candidate Record – pending literal wording check; not included in findings.",
+    "reliability_check": {
+      "quixotic": "not_completed",
+      "diachronic": "not_completed",
+      "synchronic": "not_completed"
+    },
+    "verification_next_step": "Confirm exact wording against the source PDF, Part II, p. 61.",
+    "deconstructive_analysis": {
+      "monoculture_tag": "Monoculture of Knowledge and Rigor",
+      "erased_entity": "Non-English scholarly traditions, poetic/narrative modes of inquiry, and oral epistemologies",
+      "rhetorical_device": "Linguistic policing under the banner of clarity and academic style",
+      "socio_technical_dependency": "EAD peer-review templates and journal style guides",
+      "historical_lens": {
+        "framework": "Bennett (2014) & Santos (2014)",
+        "note": "Through the project's historical lens, this raises a question about how a single academic-English register can function as a gatekeeping mechanism. This is an interpretive context, not a claim of equivalence.",
+        "citation": "Bennett, 2014, p. 61; Santos, 2014, p. 106"
+      }
+    },
+    "reconstructive_ecology": {
+      "ecology_tag": "Ecology of Knowledges",
+      "restored_presence": "Multilingual academic discourse, indigenous narrative styling, bilingual research publishing, and oral scholarship",
+      "qualitative_method_value": "Linguistic Diversity & Epistemic Translatability",
+      "validation_criterion": "Dialogic Translation & Cultural Authenticity"
+    },
+    "reflexive_log": {
+      "coder_positionality": "Audit of how English grammar requirements in academic publishing act as gatekeeping mechanisms.",
+      "timestamp": "2026-09-13T20:05:00-06:00"
+    }
+  },
+  {
+    "record_id": "SAGE-POL-2020-P084",
+    "legacy_label": "Vacuum-Packing & NVivo Node Trees",
+    "source_text": {
+      "author": "marcela polanco et al.",
+      "work": "How to Be Unfaithful to Eurocentric Qualitative Research",
+      "year": 2020,
+      "publisher": null,
+      "doi": null,
+      "srm_chapter_title": "Section 3: Methodological Infidelity and Un-packaging",
+      "srm_chapter_page": "Section 3, p. 84",
+      "notebook_pdf_source": "How_to_Be_Unfaithful_to_Euroce.pdf",
+      "unit_type": "text_passage",
+      "literal_excerpt": "Qualitative software imports raw human stories and 'vacuum-packs' them into node hierarchies, stripping the voice of its ancestral home to transform living testimony into manageable data chunks."
+    },
+    "evidence_type": "close_paraphrase",
+    "quote_checked": false,
+    "context_checked": false,
+    "finding_status": "verification_queue",
+    "finding_included": false,
+    "reliability_status": "Candidate Record – pending literal wording check; not included in findings.",
+    "reliability_check": {
+      "quixotic": "not_completed",
+      "diachronic": "not_completed",
+      "synchronic": "not_completed"
+    },
+    "verification_next_step": "Confirm exact wording against the source PDF, Section 3, p. 84.",
+    "deconstructive_analysis": {
+      "monoculture_tag": "Monoculture of Capitalist Productivity",
+      "erased_entity": "Living human connection, embodied affect, and relational responsibility of storytelling",
+      "rhetorical_device": "Efficiency-oriented extraction and commodification of narratives",
+      "socio_technical_dependency": "NVivo / MAXQDA node trees and automated coding algorithms",
+      "historical_lens": {
+        "framework": "polanco et al. (2020)",
+        "note": "Through the project's historical lens, this raises a question about how coding software can fragment testimony into decontextualized chunks. This is an interpretive context, not a claim of equivalence.",
+        "citation": "polanco et al., 2020, p. 84"
+      }
+    },
+    "reconstructive_ecology": {
+      "ecology_tag": "Ecology of Productivities",
+      "restored_presence": "Non-extractive storying, relational listening sessions, un-chunked narrative preservation, and sacred testimony protocols",
+      "qualitative_method_value": "Relational Accountability & Non-Extractive Inquiry",
+      "validation_criterion": "Storyteller Consent & Ethical Un-packaging"
+    },
+    "reflexive_log": {
+      "coder_positionality": "Logged while reflecting on the loss of emotional nuance when qualitative software fragments interview transcripts.",
+      "timestamp": "2026-09-13T20:05:00-06:00"
+    }
+  }
+]
