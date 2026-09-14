@@ -2,7 +2,7 @@
 
 *Companion to [`docs/ethical-professional-standards.md`](ethical-professional-standards.md) §5 and [`docs/audit-schema-guide.md`](audit-schema-guide.md). This document applies the project's own coding tiers ([`data/codebook.json`](../data/codebook.json)) to the project's own artifacts — the audit data schema and the coding practice it implements — rather than to Altheide's text. It is written to the same standard the rest of this project holds itself to: no tier is applied where it does not precisely fit, and no parallel is drawn without a citation anchoring it.*
 
-## Why This Is Required, Not Decorative
+## Why This Is Required
 
 Part II of this project's methodology turns Altheide's own Ethnographic Content Analysis back onto his text, on the argument that a method's neutrality claim should never go unexamined by its own users. The same argument, applied one level further, requires the same treatment of this project's coding protocol. This is not an infinite regress: it stops at one level, for reasons stated at the end of this document, not because recursion is exhausting but because a further pass would not surface anything not already disclosed here.
 
