@@ -18,6 +18,16 @@ This document presents a comprehensive, multi-tiered **Decolonial Methods Audit 
 
 To resolve pagination and edition ambiguity between print monographs and digital **SAGE Research Methods (SRM)** chapter downloads, this protocol maps every audited passage using **Notebook PDF File Names** and **SRM Digital Chapter Page Numbers** only. No print-edition page number is used as a final citation.
 
+### Date and Locator Control
+
+| Project purpose | Date or locator to use | Reason |
+| --- | --- | --- |
+| Formal APA citation and in-text citation for the original monograph | **1996** | Identifies the original work being historically situated and audited. |
+| Audit record IDs | **1996** | Follows the cited source's original publication identity. |
+| Digital-source locators | **2011 SAGE Research Methods platform presentation** | Identifies where the chapter PDF was accessed and verified. |
+| Page citation in the audit matrix | **SRM chapter title + PDF page** | Provides the stable locator for the exact digital artifact in the corpus. |
+| Technological-historical interpretation | **1996 context** | Interprets the cited practices within their mid-1990s research infrastructure, rather than judging them as though introduced in 2011. |
+
 ---
 
 ## 1. Master SRM Digital PDF Mapping Key
