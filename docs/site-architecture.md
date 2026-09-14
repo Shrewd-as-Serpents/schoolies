@@ -51,7 +51,7 @@ This specification defines the information architecture, interactive site map, U
 
 * **Layout**: Split-screen interface.
 
-  * **Left Pane (Primary Text)**: Rendered digitized excerpts from David L. Altheide's *Qualitative Media Analysis* (2011), with interactive text-highlighting.
+   * **Left Pane (Primary Text)**: Rendered digitized excerpts from David L. Altheide's *Qualitative Media Analysis* (1996), examined through the 2011 SAGE Research Methods digital presentation, with interactive text-highlighting. Chapter title and SRM PDF page identify the stable digital source location.
   * **Right Pane (Audit Card)**: Dynamic card displaying active codes for the currently selected line or visual flowchart:
 
     * *Literal Pass*: Exact string transcription.
@@ -78,12 +78,15 @@ Developers or static site generators (Astro, SvelteKit, React, or Eleventy) can 
   "title": "DecolonialAuditRecord",
   "type": "object",
   "properties": {
-    "record\_id": { "type": "string", "example": "SAGE-ALT-2011-P153" },
+    "record\_id": { "type": "string", "example": "SAGE-ALT-1996-CH5-11" },
     "source\_text": {
       "author": "David L. Altheide",
       "work": "Qualitative Media Analysis",
-      "year": 2011,
-      "page\_number": 153,
+      "year": 1996,
+      "digital\_platform": "SAGE Research Methods",
+      "digital\_platform\_record\_year": 2011,
+      "doi": "https://doi.org/10.4135/9781412985536",
+      "stable\_locator": { "chapter\_title": "Electronic Reality", "srm\_pdf\_page": "11 of 12" },
       "literal\_excerpt": "Recent software development in word processors and database managers has helped solve this problem... The system I have found useful is called Zyindex... which basically treats everything stored in files as 'one big file!'"
     },
     "deconstructive\_analysis": {

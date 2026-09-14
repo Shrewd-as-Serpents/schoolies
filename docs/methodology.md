@@ -4,7 +4,11 @@
 
 ## Why Audit a Textbook
 
-This project treats a qualitative-research-methods textbook as a **primary document** — an empirical, analyzable social product — rather than a neutral instructional manual. The audited object is David L. Altheide's *Qualitative Media Analysis* (SAGE, 2011), one of SAGE's "Little Blue Books." Auditing the textbook itself, rather than making an abstract theoretical argument, turns the literature review into a meta-critique of how an academic discipline enforces what Santos calls the "monoculture of knowledge and rigor" — using Altheide's *own* method, **Ethnographic Content Analysis (ECA)** — the reflexive, recursive, constant-comparative analysis of documents — turned back onto his guide.
+This project treats a qualitative-research-methods textbook as a **primary document** — an empirical, analyzable social product — rather than a neutral instructional manual.
+
+> **Primary-source control statement.** The primary work audited in this project is David L. Altheide's *Qualitative Media Analysis*, originally published by SAGE in 1996. The work was accessed through its SAGE Research Methods digital presentation, whose platform record displays a 2011 publication date and is identified by DOI `10.4135/9781412985536`. This project uses **Altheide (1996)** for formal academic citation, historical interpretation, and audit-record identifiers. It uses the SAGE Research Methods chapter title and downloadable PDF page as the stable locator for the digital text consulted. The 2011 platform date is recorded as access-platform metadata, not treated as a new or revised edition.
+
+Auditing the textbook itself, rather than making an abstract theoretical argument, turns the literature review into a meta-critique of how an academic discipline enforces what Santos calls the "monoculture of knowledge and rigor" — using Altheide's *own* method, **Ethnographic Content Analysis (ECA)** — the reflexive, recursive, constant-comparative analysis of documents — turned back onto his guide.
 
 ## The Six-Step Operational Coding Protocol
 

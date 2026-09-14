@@ -64,8 +64,9 @@ This master reference key is designed for internal project mapping across the li
 * **Project Function**: Primary theoretical weapon for Tier 2 deconstructive extraction coding (`EXT_GENTRIFICATION`, `EXT_VACUUM_PACK`, `EXT_STORYCIDE`, `EXT_ZERO_POINT`).
 * **Notebook Source**: `How_to_Be_Unfaithful_to_Euroce.pdf`, `Decolonizing Methodology...`.
 
-### `[REF-ALT-2011]` Altheide, D. L. (2011)
-* **Full Citation**: Altheide, D. L. (2011). *Qualitative Media Analysis*. SAGE Publications.
+### `[REF-ALT-1996]` Altheide, D. L. (1996)
+* **Full Citation**: Altheide, D. L. (1996). *Qualitative media analysis* (Qualitative Research Methods Series, Vol. 38). SAGE Publications. https://doi.org/10.4135/9781412985536
+* **Digital-source control**: Accessed through the SAGE Research Methods digital presentation, whose platform record displays 2011 as platform metadata. Stable locator: chapter title and SRM PDF page; the platform date is not treated as a new or revised edition.
 * **Key Concepts**: Ethnographic Content Analysis (ECA), Pre-coded Protocols, Indexing Software (ZyIndex), Media Logic, Formatting.
 * **Project Function**: Primary empirical object of analysis (the "Little Blue Book" textbook being audited).
 * **Notebook Source**: `qualitative-media-analysis (1-6).pdf`, `qualitative-media-analysis_d32.pdf`.
@@ -163,7 +164,7 @@ This master reference key is designed for internal project mapping across the li
 | `[REF-GRO-2013]` | Grosfoguel (2013) | Historical Epistemicide | 4 Historical Bias Lenses |
 | `[REF-CAS-2010]` | Castro-Gómez (2010) | Philosophy of Science | Zero-Point Hubris (*Punto Zero*) Critique |
 | `[REF-POL-2020]` | polanco et al. (2020) | Qualitative Critique | Extraction, Gentrification, & Storycide |
-| `[REF-ALT-2011]` | Altheide (2011) | Textbook Audit Object | Qualitative Media Analysis (ECA) Audit |
+| `[REF-ALT-1996]` | Altheide (1996) | Textbook Audit Object | Qualitative Media Analysis (ECA) Audit |
 | `[REF-WOL-2009]` | Wolcott (2009) | Qualitative Methods | Thick Description & Validity Standards |
 | `[REF-KIR-1986]` | Kirk & Miller (1986) | Qualitative Methods | Synchronic / Diachronic Reliability Checks |
 | `[REF-BEN-2014]` | Bennett (2014) | Sociolinguistics | English Academic Discourse (EAD) Monoculture |
