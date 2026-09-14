@@ -45,7 +45,7 @@ This master reference key is designed for internal project mapping across the li
 * **Project Function**: Analyzes how rigid insistence on standard methods functions as a technology of ontological control.
 
 ### `[REF-SMI-2012]` Smith, L. T. (2012)
-* **Full Citation**: Smith, L. T. (2012). *Decolonizing methodologies: Research and Indigenous peoples* (2nd ed.). Zed Books.
+* **Full Citation**: Smith, L. T. (2012). *Decolonizing methodologies: Research and Indigenous peoples* (). Zed Books.
 * **Key Concepts**: Imperial Research, Extraction, Indigenous Knowledge Systems, Counter-Research Protocols.
 * **Project Function**: Foundational text for critiquing Western academic research as an instrument of empire.
 

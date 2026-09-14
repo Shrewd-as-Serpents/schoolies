@@ -10,35 +10,70 @@
     "deconstructive_analysis",
     "infrastructure_critique",
     "reconstructive_ecology",
-    "reflexive_log"
+    "reflexive_log",
+    "nested_complicity"
   ],
   "properties": {
     "record_id": {
       "type": "string",
       "description": "Unique id, format SAGE-<AUTHOR3>-<YEAR>-<SRM-LOCATOR>. The year is the original publication year; the locator identifies the stable digital chapter/PDF location.",
       "pattern": "^SAGE-[A-Z]{3}-[0-9]{4}-(CH[0-9]+(-FIG[0-9]-[0-9])?|P[0-9]+)[A-Z]?$",
-      "examples": ["SAGE-ALT-1996-CH5-11"]
+      "examples": [
+        "SAGE-ALT-1996-CH5-11"
+      ]
     },
     "source_text": {
       "type": "object",
-      "required": ["author", "work", "year", "page_number", "literal_excerpt"],
+      "required": [
+        "author",
+        "work",
+        "year",
+        "page_number",
+        "literal_excerpt"
+      ],
       "properties": {
-        "author": { "type": "string" },
-        "work": { "type": "string" },
-        "year": { "type": "integer", "description": "Original publication year used for formal citation." },
-        "publisher": { "type": "string" },
-        "digital_platform": { "type": "string" },
-        "digital_platform_record_year": { "type": "integer", "description": "Access-platform metadata date; not a revised-edition date." },
-        "doi": { "type": "string", "format": "uri" },
+        "author": {
+          "type": "string"
+        },
+        "work": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer",
+          "description": "Original publication year used for formal citation."
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "digital_platform": {
+          "type": "string"
+        },
+        "digital_platform_record_year": {
+          "type": "integer",
+          "description": "Access-platform metadata date; not a revised-edition date."
+        },
+        "doi": {
+          "type": "string",
+          "format": "uri"
+        },
         "stable_locator": {
           "type": "object",
-          "required": ["chapter_title", "srm_pdf_page"],
+          "required": [
+            "chapter_title",
+            "srm_pdf_page"
+          ],
           "properties": {
-            "chapter_title": { "type": "string" },
-            "srm_pdf_page": { "type": "string" }
+            "chapter_title": {
+              "type": "string"
+            },
+            "srm_pdf_page": {
+              "type": "string"
+            }
           }
         },
-        "page_number": { "type": "integer" },
+        "page_number": {
+          "type": "integer"
+        },
         "literal_excerpt": {
           "type": "string",
           "description": "Verbatim quotation only. No paraphrase, no interpretation. This is the Wolcott (2009) transparency layer -- every downstream tag must be traceable back to this exact string."
@@ -48,13 +83,24 @@
     "deconstructive_analysis": {
       "type": "object",
       "description": "Discipline 1: decolonial sociology (Santos, Grosfoguel, Trouillot). What the passage renders non-existent, and which historical epistemicide it re-enacts.",
-      "required": ["monoculture_tags", "erased_entity", "rhetorical_device", "historical_epistemicide_lens"],
+      "required": [
+        "monoculture_tags",
+        "erased_entity",
+        "rhetorical_device",
+        "historical_epistemicide_lens"
+      ],
       "properties": {
         "monoculture_tags": {
           "type": "array",
           "description": "One or more of Santos's five monocultures. Use the short codes from decolonial-methods-audit-protocol.md Section 2.1.",
           "items": {
-            "enum": ["MONO_KNOWLEDGE", "MONO_TIME", "MONO_CLASS", "MONO_SCALE", "MONO_PRODUCTIVITY"]
+            "enum": [
+              "MONO_KNOWLEDGE",
+              "MONO_TIME",
+              "MONO_CLASS",
+              "MONO_SCALE",
+              "MONO_PRODUCTIVITY"
+            ]
           },
           "minItems": 1
         },
@@ -68,15 +114,33 @@
         },
         "historical_epistemicide_lens": {
           "type": "object",
-          "required": ["framework", "erasure_type"],
+          "required": [
+            "framework",
+            "erasure_type"
+          ],
           "properties": {
-            "framework": { "type": "string", "description": "Citing REF ids from master-reference-key.md, e.g. '[REF-GRO-2013]; [REF-TRO-1995]'." },
-            "erasure_type": { "type": "string" },
+            "framework": {
+              "type": "string",
+              "description": "Citing REF ids from master-reference-key.md, e.g. '[REF-GRO-2013]; [REF-TRO-1995]'."
+            },
+            "erasure_type": {
+              "type": "string"
+            },
             "historical_lens_tag": {
-              "enum": ["HIST_AL_ANDALUS", "HIST_INDIGENOUS_GENOCIDE", "HIST_AFRICAN_ENSLAVEMENT", "HIST_GENDER_WITCH_HUNTS"]
+              "enum": [
+                "HIST_AL_ANDALUS",
+                "HIST_INDIGENOUS_GENOCIDE",
+                "HIST_AFRICAN_ENSLAVEMENT",
+                "HIST_GENDER_WITCH_HUNTS"
+              ]
             },
             "silence_moment": {
-              "enum": ["FACT_CREATION", "FACT_ASSEMBLY", "FACT_RETRIEVAL", "RETROSPECTIVE_SIGNIFICANCE"],
+              "enum": [
+                "FACT_CREATION",
+                "FACT_ASSEMBLY",
+                "FACT_RETRIEVAL",
+                "RETROSPECTIVE_SIGNIFICANCE"
+              ],
               "description": "Trouillot's (1995) four moments of archival silencing."
             }
           }
@@ -86,7 +150,13 @@
     "infrastructure_critique": {
       "type": "object",
       "description": "Discipline 2: information science / critical data studies (Olson, Patin et al., Trouillot-as-archival-theorist, Duarte & Belarde-Lewis, Berman, Sutherland). NEW in v2 -- see docs/audit-schema-guide.md '#1' for why this is its own top-level section rather than a nested field.",
-      "required": ["mechanism_type", "named_system_or_practice", "technical_function", "gatekeeping_effect", "is_it_literature"],
+      "required": [
+        "mechanism_type",
+        "named_system_or_practice",
+        "technical_function",
+        "gatekeeping_effect",
+        "is_it_literature"
+      ],
       "properties": {
         "mechanism_type": {
           "description": "The CLASS of infrastructure being audited, not the specific product. This is the taxonomy an IT/data-architecture reader will actually recognize from their own work. Closed vocabulary, extend deliberately (see guide).",
@@ -113,7 +183,10 @@
         "is_it_literature": {
           "type": "array",
           "description": "REF ids from master-reference-key.md Section 3 (Archival Power, Metadata, & Epistemicide in Information Studies). This array is what makes the 'second named discipline' claim falsifiable rather than asserted -- every infrastructure_critique should cite at least one.",
-          "items": { "type": "string", "pattern": "^\\[REF-[A-Z]{3}-[0-9]{4}\\]$" },
+          "items": {
+            "type": "string",
+            "pattern": "^\\[REF-[A-Z]{3}-[0-9]{4}\\]$"
+          },
           "minItems": 1
         }
       }
@@ -121,22 +194,74 @@
     "reconstructive_ecology": {
       "type": "object",
       "description": "The synthesis move: Santos's Ecologies answering the Monocultures tagged above, validated against qualitative-methods reliability standards.",
-      "required": ["ecology_tag", "restored_presence", "qualitative_method_value", "validation_criterion"],
+      "required": [
+        "ecology_tag",
+        "restored_presence",
+        "qualitative_method_value",
+        "validation_criterion"
+      ],
       "properties": {
         "ecology_tag": {
-          "enum": ["ECO_KNOWLEDGES", "ECO_TEMPORALITIES", "ECO_RECOGNITION", "ECO_TRANSSCALE", "ECO_PRODUCTIVITIES"]
+          "enum": [
+            "ECO_KNOWLEDGES",
+            "ECO_TEMPORALITIES",
+            "ECO_RECOGNITION",
+            "ECO_TRANSSCALE",
+            "ECO_PRODUCTIVITIES"
+          ]
         },
-        "restored_presence": { "type": "string" },
-        "qualitative_method_value": { "type": "string" },
-        "validation_criterion": { "type": "string" }
+        "restored_presence": {
+          "type": "string"
+        },
+        "qualitative_method_value": {
+          "type": "string"
+        },
+        "validation_criterion": {
+          "type": "string"
+        }
       }
     },
     "reflexive_log": {
       "type": "object",
-      "required": ["coder_positionality", "timestamp"],
+      "required": [
+        "coder_positionality",
+        "timestamp"
+      ],
       "properties": {
-        "coder_positionality": { "type": "string" },
-        "timestamp": { "type": "string", "format": "date" }
+        "coder_positionality": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "nested_complicity": {
+      "type": "object",
+      "description": "Tier 6. Records where auditing this unit required the project to perform the mechanism the unit is coded for.",
+      "required": [
+        "tags",
+        "note",
+        "status"
+      ],
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "NEST_APPARATUS",
+              "NEST_STANDARD",
+              "NEST_UNRESOLVED"
+            ]
+          }
+        },
+        "note": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
       }
     }
   }

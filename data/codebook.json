@@ -122,5 +122,23 @@
         "status": "placeholder -- the citation base (Section 3 of master-reference-key.md) supports this category, but it awaits its own audited textbook passage."
       }
     }
+  },
+  "tier_6_nested_complicity": {
+    "framework": "Grounded in polanco et al. (2020), Tuck and Yang (2012), Maldonado-Torres (2017), and Spivak (1988) [REF-POL-2020]; [REF-TUC-2012]; [REF-MAL-2017]; [REF-SPI-1988]. These sources argue that a decolonial critique conducted through the apparatus it critiques does not thereby exit that apparatus.",
+    "scope_note": "Applies to this project's own audit operation on a given unit, not to the audited text itself.",
+    "codes": {
+      "NEST_APPARATUS": {
+        "name": "Apparatus Reproduces the Coded Mechanism",
+        "definition": "Auditing this unit required the project to perform the same technical mechanism the unit is coded for."
+      },
+      "NEST_STANDARD": {
+        "name": "Critiqued Practice Invoked as the Audit's Own Validity Standard",
+        "definition": "The practice coded as a mechanism of erasure in this unit is also a standard this project relies on to defend its own reliability."
+      },
+      "NEST_UNRESOLVED": {
+        "name": "Nesting Not Exitable Within Project Scope",
+        "definition": "No available alternative within this project's scope would avoid the mechanism named."
+      }
+    }
   }
 }
