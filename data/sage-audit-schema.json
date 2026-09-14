@@ -15,9 +15,9 @@
   "properties": {
     "record_id": {
       "type": "string",
-      "description": "Unique id, format SAGE-<AUTHOR3>-<YEAR>-P<PAGE>. If a page has more than one audited unit, append -A, -B, ... .",
-      "pattern": "^SAGE-[A-Z]{3}-[0-9]{4}-P[0-9]+[A-Z]?$",
-      "examples": ["SAGE-ALT-2011-P153"]
+      "description": "Unique id, format SAGE-<AUTHOR3>-<YEAR>-<SRM-LOCATOR>. The year is the original publication year; the locator identifies the stable digital chapter/PDF location.",
+      "pattern": "^SAGE-[A-Z]{3}-[0-9]{4}-(CH[0-9]+(-FIG[0-9]-[0-9])?|P[0-9]+)[A-Z]?$",
+      "examples": ["SAGE-ALT-1996-CH5-11"]
     },
     "source_text": {
       "type": "object",
@@ -25,7 +25,19 @@
       "properties": {
         "author": { "type": "string" },
         "work": { "type": "string" },
-        "year": { "type": "integer" },
+        "year": { "type": "integer", "description": "Original publication year used for formal citation." },
+        "publisher": { "type": "string" },
+        "digital_platform": { "type": "string" },
+        "digital_platform_record_year": { "type": "integer", "description": "Access-platform metadata date; not a revised-edition date." },
+        "doi": { "type": "string", "format": "uri" },
+        "stable_locator": {
+          "type": "object",
+          "required": ["chapter_title", "srm_pdf_page"],
+          "properties": {
+            "chapter_title": { "type": "string" },
+            "srm_pdf_page": { "type": "string" }
+          }
+        },
         "page_number": { "type": "integer" },
         "literal_excerpt": {
           "type": "string",

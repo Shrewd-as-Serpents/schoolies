@@ -6,6 +6,8 @@
 
 ## 1. Edition conflict — RESOLVED
 
+**Primary-source control statement.** The primary work audited in this project is David L. Altheide's *Qualitative Media Analysis*, originally published by SAGE in 1996. The work was accessed through its SAGE Research Methods digital presentation, whose platform record displays a 2011 publication date and is identified by DOI `10.4135/9781412985536`. This project uses **Altheide (1996)** for formal academic citation, historical interpretation, and audit-record identifiers. It uses the SAGE Research Methods chapter title and downloadable PDF page as the stable locator for the digital text consulted. The 2011 platform date is recorded as access-platform metadata, not treated as a new or revised edition.
+
 **Resolution.** The primary source audited in this project is confirmed as **David L. Altheide (1996), *Qualitative Media Analysis*, SAGE Publications, Inc.**, DOI [10.4135/9781412985536](https://doi.org/10.4135/9781412985536), accessed through the SAGE Research Methods (SRM) digital chapter-download platform. The SRM record resolving from this DOI lists the publication year as 1996 and the sole author as David L. Altheide.
 
 **Why 1996 and not 2011 or 2013.** An earlier pass in this project labeled the digital edition "2011," a date that does not appear on the SAGE Research Methods record itself. Checking the DOI directly shows a Pub. Date of 1996. A separate 2013 second edition, co-authored with Christopher J. Schneider, is a materially different, differently-paginated text (WorldCat OCLC 820790765) and is **not** the object audited in this project.
