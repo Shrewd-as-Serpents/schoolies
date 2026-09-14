@@ -1,6 +1,6 @@
 # Decoding Absences
 
-A decolonial audit of a qualitative-research-methods textbook, read through two named disciplines: **decolonial sociology** (Santos, Grosfoguel, Castro-Gómez, polanco et al.) and **information science / critical data studies** (Trouillot, Patin et al., Olson, Duarte & Belarde-Lewis) — arguing that indexing systems, metadata schemas, and database access are not neutral technical infrastructure but active gatekeepers of what counts as legible, findable knowledge.
+A decolonial audit of a qualitative-research-methods textbook, read through two named disciplines: **decolonial sociology** (Santos, Grosfoguel, Castro-Gómez, polanco et al.) and **information science / critical data studies** (Trouillot, Patin et al., Olson, Duarte & Belarde-Lewis); arguing that indexing systems, metadata schemas, and database access are not neutral technical infrastructure but active gatekeepers of what counts as legible, findable knowledge.
 
 The audited object is David L. Altheide's *Qualitative Media Analysis*, originally published by SAGE in 1996 and examined through the 2011 SAGE Research Methods digital presentation (DOI: [10.4135/9781412985536](https://doi.org/10.4135/9781412985536)).
 
@@ -8,7 +8,7 @@ The audit treats the book's discussion of Gopher, VCR counters, CD-ROM systems, 
 
 ## Who this is for
 
-Two audiences, deliberately: a sociology/decolonial-studies reader, and an **IT/data-architecture reader** — the people who design the classification systems, CMS platforms, and metadata taxonomies this project argues are never epistemically neutral.
+Two audiences, deliberately: a sociology/decolonial-studies reader, and an **IT/data-architecture reader**; the people who design the classification systems, CMS platforms, and metadata taxonomies this project argues are never epistemically neutral.
 
 ## Structure
 
@@ -35,10 +35,10 @@ archive/original-drafts/   Superseded prose drafts, kept for reference -- their 
 
 ## Start here
 
-1. [`docs/theoretical-framework.md`](docs/theoretical-framework.md) — the argument, in prose.
-2. [`docs/methodology.md`](docs/methodology.md) — how the argument becomes a coding protocol.
-3. [`data/sage-audit-data.json`](data/sage-audit-data.json) — the protocol applied to real textbook passages.
-4. [`docs/audit-schema-guide.md`](docs/audit-schema-guide.md) — if you're going to add a new audited passage or change the data model.
+1. [`docs/theoretical-framework.md`](docs/theoretical-framework.md); the argument, in prose.
+2. [`docs/methodology.md`](docs/methodology.md); how the argument becomes a coding protocol.
+3. [`data/sage-audit-data.json`](data/sage-audit-data.json); the protocol applied to real textbook passages.
+4. [`docs/audit-schema-guide.md`](docs/audit-schema-guide.md); if you're going to add a new audited passage or change the data model.
 
 ## Status
 
