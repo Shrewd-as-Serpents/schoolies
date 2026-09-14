@@ -4,6 +4,8 @@ A decolonial audit of a qualitative-research-methods textbook, read through two 
 
 The audited object is David L. Altheide's *Qualitative Media Analysis*, originally published by SAGE in 1996 and examined through the 2011 SAGE Research Methods digital presentation (DOI: [10.4135/9781412985536](https://doi.org/10.4135/9781412985536)).
 
+The audit treats the book's discussion of Gopher, VCR counters, CD-ROM systems, ZyIndex, and subscription-based research databases as part of a specific mid-1990s research infrastructure, not as evidence that those tools were old-fashioned for their time. It examines whether the method's assumptions about indexability, retrievability, standardization, and institutionally available archives still illuminate durable questions about what becomes researchable knowledge.
+
 ## Who this is for
 
 Two audiences, deliberately: a sociology/decolonial-studies reader, and an **IT/data-architecture reader** — the people who design the classification systems, CMS platforms, and metadata taxonomies this project argues are never epistemically neutral.
