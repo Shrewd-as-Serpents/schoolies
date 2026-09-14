@@ -5,11 +5,16 @@
     "source_text": {
       "author": "David L. Altheide",
       "work": "Qualitative Media Analysis",
-      "year": 1996,
-      "publisher": "SAGE Publications, Inc.",
+      "original_publication_year": 1996,
+      "publisher": "SAGE Publications",
+      "digital_platform": "SAGE Research Methods",
+      "digital_platform_record_year": 2011,
       "doi": "https://doi.org/10.4135/9781412985536",
-      "srm_chapter_title": "Chapter 5: Electronic Reality",
-      "srm_chapter_page": "Ch. 5, p. 11 of 12",
+      "citation_year": 1996,
+      "stable_locator": {
+        "chapter_title": "Electronic Reality",
+        "srm_pdf_page": "11 of 12"
+      },
       "notebook_pdf_source": "qualitative-media-analysis (2).pdf",
       "unit_type": "software_instruction",
       "literal_excerpt": "Recent software development in word processors and database managers has helped solve this problem of how to manage and study multiple files at once. The solution involves indexing or having your computer 'read and mark' your files so that a few simple commands can basically treat everything stored in files as 'one big file!'... The system I have found useful is called Zyindex... this capacity to search all relevant documents is a terrific way to scan and review materials that often become a source of creative insights, codes, and especially examples."
